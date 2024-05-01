@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>reserve já</title>
+  <link rel="stylesheet" href="reserve.css">
+
+  <link rel="icon" href="img/pizza1-removebg-preview.png" type="image/x-icon">
+
+</head>
+<body>
+  <nav>
+    <ul class="Caixa_li_Principal">
+      <li>pizzaria AiqueFome
+        <img src="img/pizza1-removebg-preview.png" alt="Pizza">
+
+      </li>
+
+    </ul>
+  </nav>
+
+  <main>
+    <div class="Caixa_Principal">
+      <div class="Caixa_Primeira_Pizza">
+      <h1>Escolha sua pizza:</h1>
+      <select name="Primeira_Pizza" id="Primeira_Pizza">
+        <option value="Nenhum" id="Nenhum">nenhum</option>
+        <option value="Calabresa" id="Calabresa">calabresa</option>
+        <option value="Quatro_Queijos" id="Quatro_Queijos">quatro queijos</option>
+        <option value="Bacon">bacon</option>
+        <option value="Bacon">frango</option>
+        <option value="Bacon">atum</option>
+        <option value="Bacon">portuguesa</option>
+        <option value="Bacon">baiana</option>
+        <option value="Bacon">lombo</option>
+        <option value="Bacon">fitness</option>
+        <option value="Bacon">marguerita</option>
+        <option value="Bacon">moda da casa</option>
+        <option value="Bacon">strogonoff</option>
+
+
+      </select>
+    </div>
+
+    <div class="Caixa_Primeira_Pizza">
+      <h1>Escolha sua pizza:</h1>
+      <select name="Primeira_Pizza" id="Primeira_Pizza">
+        <option value="Nenhum">nenhum</option>
+        <option value="Calabresa">morango</option>
+        <option value="Frango">chocolate branco</option>
+        <option value="4Queijos">goiabada</option>
+        <option value="Bacon">romeu e julieta</option>
+        <option value="Bacon">prestigío</option>
+        <option value="Bacon">bombom</option>
+        <option value="Bacon">disquete</option>
+        <option value="Bacon">banana e canela</option>
+        <option value="Bacon">sorvete</option>
+        <option value="Bacon">dois amores</option>
+        <option value="Bacon">doce de leite</option>
+        <option value="Bacon">bis</option>
+
+      </select>
+    </div>
+
+    <div class="Caixa_Primeira_Pizza">
+      <h1>Escolha sua pizza:</h1>
+      <select name="Primeira_Pizza" id="Primeira_Pizza">
+        <option value="Nenhum">nenhum</option>
+        <option value="Calabresa">Calabresa</option>
+        <option value="Frango">Frango</option>
+        <option value="4Queijos">4 Queijos</option>
+        <option value="Bacon">Bacon</option>
+        <option value="Bacon">Bacon</option>
+        <option value="Bacon">Bacon</option>
+        <option value="Bacon">Bacon</option>
+        <option value="Bacon">Bacon</option>
+        <option value="Bacon">Bacon</option>
+        <option value="Bacon">Bacon</option>
+        <option value="Bacon">Bacon</option>
+        <option value="Bacon">Bacon</option>
+     
+      </select>
+    </div>
+    <div class="Tamanho">
+      <h2>selecione o tamanho da pizza:</h2>
+    <select name="Tamanho_Pizza" id="Tamanho_Pizza">
+      <option value="Pequena" id="Pequena">pequena</option>
+      <option value="Media" id="Media">média</option>
+      <option value="Grande" id="Grande">Grande</option>
+
+    </select>
+  </div>
+
+  <div class="Bebidas">
+    <h3>incluir bebidas</h3>
+    <select name="Bebidas" id="Bebidas">
+      <option value="Nenhum">nenhum</option>
+      <option value="CocaCola">coca cola</option>
+      <option value="Sprite">sprite</option>
+      <option value="FantaUva">fanta uva</option>
+      <option value="Guaraná">guaraná</option>
+
+    </select>
+  </div>
+
+
+<div class="Caixa_Formpag">
+  <h4>escolha sua forma de pagamento</h4>
+  <img class="FormCartao" src="img/formapagamentoCartao-removebg.png" alt="Cartão de crédito">
+  <img class="FormPix" src="img/pixSimbolo-removebg-preview.png" alt="Pix">
+  <img class="FormDinheiro" src="img/dinheirofisico-removebg-preview.png" alt="Dinheiro fisíco">
+
+<div class="Caixa_FormCartao">
+  <h5>insira os dados do cartão</h5>
+  <input type="text" id="Numero_Cartao" placeholder="Digite o Numero do Cartão" required>
+  <input type="text" id="Nome" placeholder="Digite o nome do Titular da conta" required>
+  <input type="text" id="CPF" placeholder="Digite o seu Cpf" required>
+  <input type="text" id="Senha" placeholder="Digite a Senha do Cartão" required>
+  <input type="text" id="CVV" placeholder="Digite o CVV do Cartão" required>
+
+
+</div>
+
+<div class="Caixa_FormPix">
+  <h6>insira sua chave pix</h6>
+  <input type="text" placeholder="Digite sua Chave Pix">
+
+
+</div>
+
+<div class="Caixa_FormDinheiro">
+  <input type="text" placeholder="Digite o Valor">
+
+
+
+</div>
+
+</div>
+<input class="Finalizar_Pedido" type="submit" value="finalizar pedido: R$ 22,00">
+    </div>
+  </main>
+  
+  <main>
+    <div class="Meu_Pedido">
+      <h1>meu pedido</h1>
+      <p class="Pizza1"></p>
+      <p class="Tamanho_Pizza_MeuPedido"></p>
+      <p class="Refrigerante"></p>
+      <p class="Forma_Pagamento_MeuPedido"> </p>
+    </div>
+  </main>
+
+
+
+
+  <footer>
+    <p>&copy; 2024 Pizzaria AiQueFome</p>
+  </footer>
+
+
+
+  <script src="reserve.js"></script>
+</body>
+</html>
