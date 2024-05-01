@@ -253,47 +253,100 @@ letter-spacing: 4px;
 }
 
 
+
+
 @media all and (max-width: 767px) {
-    .Caixa_Inicial,
     .Caixa_Cardapio,
     .Caixa_Pizza_Doce,
     .Caixa_Sobre {
         width: 100%;
         padding: 0;
         margin: 0;
+    
+    }
+
+    h2{
+font-size: 22px;
+    }
+
+    h3{
+font-size: 22px;
+
     }
 
     .Caixa_Inicial {
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 100px 0 auto;
+
+    }
+
+    .Caixa_Inicial h1{
+        width: 70%;
+        font-size: 30px;
+    }
+
+    .Caixa_Inicial p {
+        width: 70%;
+        font-size: 17px;
+
     }
 
     .Caixa_Cardapio,
     .Caixa_Pizza_Doce {
-        overflow-x: auto;
+        overflow-y: auto;
     }
 
     .Pizzas,
     .Pizzas_Doces {
         width: 50%;
         /* ou 100%, dependendo do design desejado */
-        box-sizing: border-box; /* Garante que padding e border sejam considerados na largura */
-        padding: 10px; /* Adapte conforme necessário */
-        margin: 0; /* Remove margens extras */
-        float: left; /* Garante que as caixas sejam exibidas lado a lado */
+    }
+
+    .Caixa_Sobre h1{
+    width: 70%;
+    font-size: 25px;
+    }
+
+    .Caixa_Sobre p {
+        width: 60%;
+        font-size: 14px; 
     }
    
     .Caixa_Sobre img{
-    width: 50%;
+    width: 100px;
+    height: 50px;
+    }
+    .footer{
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+    }
+
+    .footer h5{
+        font-size: 11px;
+    }
+    .footer svg {
+        width: 20px;
+    }
+
+    .footer span{
+        font-size: 11px;
     }
     /* Limpar floats para evitar problemas de layout */
     .clear {
         clear: both;
     }
 
+
+
     /* Estilos adicionais conforme necessário */
 }
+
+
+
+
 
 
 
@@ -580,10 +633,11 @@ text-align: center;
 
 }
 
+
 footer{
 display: flex;
 justify-content: center;
-background-color: #412b2b;
+background-color: #1a1616;
 align-items: center;
 }
 
@@ -601,54 +655,11 @@ margin-left: 20px;
 
 }
 
-.footer span{
-margin-left: 10px;
-color: #eedfdf;
-
-
-}
 
 
 
 
 
 
-footer{
-display: flex;
-background-color: rgb(22, 20, 20);
-justify-content: center;
-}
-footer h1{
-color: #ffffff;
-font-weight: 500;
-font-size: 1.8rem;
-letter-spacing: 2px;
-font-style: italic;
-
-}
 
 
-/*.Caixa_Sobre{
-    background-color: #1f1e1f;
-    display: flex;
-    flex-direction: column;
-    margin-right: 20px;
-    width: 100%;
-    height: 300px;
-}
-
-.Caixa_Sobre h1{
-font-size: 2rem;
-margin-bottom: 1rem;
-font-family: 'Indie Flower', cursive;
-    
-}
-
-
-
-.Caixa_Sobre img{
-    height: 400px;
-    margin-left: 20px;
-    width: 30%;
-}
-*/
