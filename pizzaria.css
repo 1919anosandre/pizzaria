@@ -135,14 +135,7 @@ z-index: 1000; /* Garanta que a lista fique acima de outros elementos na página
 
 
 }
-.Login{
-    padding: 20px;
-    font-size: 20px;
-    letter-spacing: 2px;
-    cursor: pointer;
 
-
-}
 
 
 @keyframes floatUpDown {
@@ -178,11 +171,6 @@ color: #ffc506;
 }
 
 .Sobre:hover{
-border-bottom: 4px solid #ffc506;  
-color: #ffc506;
-}
-
-.Login:hover{
 border-bottom: 4px solid #ffc506;  
 color: #ffc506;
 }
