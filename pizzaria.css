@@ -280,12 +280,17 @@ h4 {
     .Caixa_Inicial h1 {
         width: 70%;
         font-size: 30px;
+        text-align: center;
     }
 
     .Caixa_Inicial p {
         width: 70%;
         font-size: 17px;
+        text-align: center;
 
+    }
+    .Caixa_Inicial button{
+        text-align: center;
     }
 
 
@@ -501,10 +506,9 @@ section {
     margin-top: 10px;
 }
 
-.Pedir_Já {
+.Caixa_Inicial button {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    /* Preto totalmente transparente */
     border-radius: 07px;
     border: 1px solid rgb(255, 255, 0);
     padding: 20px;
@@ -514,7 +518,7 @@ section {
     font-size: 20px;
 }
 
-.Pedir_Já:hover {
+.Caixa_Inicial button:hover {
     cursor: pointer;
     background-color: rgb(255, 255, 0);
     color: #000000;
