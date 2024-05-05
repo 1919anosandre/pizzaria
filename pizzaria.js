@@ -1,2 +1,45 @@
-document.addEventListener("DOMContentLoaded",()=>{const e=document.querySelector(".Inicio"),o=document.querySelector(".Cardapio"),t=document.querySelector(".Sobre");document.querySelector(".Login"),document.querySelector(".Pizza_Doce_li");const c=document.querySelector(".Caixa_Inicial");document.querySelector(".Caixa_li_principal_celular");const n=document.querySelector(".Caixa_Cardapio");document.querySelector(".Caixa_Pizza_Doce");const r=document.querySelector(".Caixa_Sobre");e.addEventListener("click",()=>{c.scrollIntoView({behavior:"smooth"})}),o.addEventListener("click",()=>{n.scrollIntoView({behavior:"smooth"})}),t.addEventListener("click",()=>{r.scrollIntoView({behavior:"smooth"})})}),window.onload=function(){const e=document.querySelector(".Promocao"),o=new Date;2===o.getDay()&&(e.style.display="flex")};
+document.addEventListener("DOMContentLoaded", () => {
+    const Inicio = document.querySelector(".Inicio");
+    const Cardapio = document.querySelector(".Cardapio");
+    const Sobre = document.querySelector(".Sobre");
+    const Caixa_Inicial = document.querySelector(".Caixa_Inicial");
+    const Caixa_Cardapio = document.querySelector(".Caixa_Cardapio");
+    const Caixa_Sobre = document.querySelector(".Caixa_Sobre");
 
+    Inicio.addEventListener("click", () => {
+        Caixa_Inicial.scrollIntoView({ behavior: "smooth" });
+    });
+
+    Cardapio.addEventListener("click", () => {
+        Caixa_Cardapio.scrollIntoView({ behavior: "smooth" });
+    });
+
+    Sobre.addEventListener("click", () => {
+        Caixa_Sobre.scrollIntoView({ behavior: "smooth" });
+    });
+});
+
+//container do dia de promoções da pizzaria
+window.onload = function () {
+    const promocao = document.querySelector(".Promocao");
+    const data = new Date();
+
+    if (data.getDay() === 2) {
+        promocao.style.display = "flex";
+    }
+};
+
+document.addEventListener("DOMContentLoaded", function() {
+    const backgrounds = ["img/pizza2.jpg", "img/pizza4.jpg.jpg", "img/pizza.jpg"]; // Lista de URLs das imagens de fundo
+    let index = 0;
+  
+    function changeBackground() {
+      document.body.style.backgroundImage = `url(${backgrounds[index]})`;
+      index = (index + 1) % backgrounds.length;
+      setTimeout(changeBackground, 3000); // Troca a imagem a cada 3 segundos
+    }
+  
+    changeBackground(); // Inicia o slideshow
+  });
+  
+  
