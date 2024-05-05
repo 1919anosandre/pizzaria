@@ -30,7 +30,6 @@ body {
     margin: 0;
     height: 100vh;
     width: 100vw;
-
     padding: 0;
     background-size: cover;
     background-repeat: no-repeat;
@@ -41,28 +40,6 @@ body {
 
 }
 
-.Promocao {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    max-width: 500px;
-    width: 100%;
-    height: 400px;
-    background-color: #eedfdf;
-    border-radius: 7px;
-    border: 01px solid black;
-    margin: 100px auto 0;
-}
-
-.Promocao h1 {
-    font-size: 20px;
-}
-
-.Promocao img {
-    height: 40px;
-    top: 0;
-    align-items: flex-end;
-}
 
 .Caixa_li_Principal {
     background-color: #1f1e1f;
@@ -74,7 +51,6 @@ body {
     width: 100%;
     position: fixed;
     z-index: 1000;
-    /* Garanta que a lista fique acima de outros elementos na página */
 
 
 
@@ -95,9 +71,7 @@ body {
 
 .Caixa_li_Principal:hover img:hover {
     color: #ffc506;
-    /* Muda a cor do texto quando a imagem é hover */
     border-bottom: 4px solid #ffc506;
-    /* Adiciona uma borda inferior quando .caixa_li_Principal é hover */
 
 }
 
@@ -118,7 +92,6 @@ body {
 
 .logo_pizzaria img {
     animation: floatUpDown 3s ease-in-out infinite alternate;
-    /* Aplica a animação */
 
 }
 
@@ -152,29 +125,24 @@ body {
 @keyframes floatUpDown {
     0% {
         transform: translateY(0);
-        /* Começa a partir da posição inicial */
     }
 
     100% {
         transform: translateY(-20px);
-        /* Move para cima */
     }
 }
 
 @keyframes mudarCor {
     0% {
         color: red;
-        /* Cor inicial */
     }
 
     50% {
         color: rgb(255, 187, 0);
-        /* Cor intermediária */
     }
 
     100% {
         color: orangered;
-        /* Cor final */
     }
 }
 
@@ -212,14 +180,12 @@ body {
     letter-spacing: 2px;
     z-index: 1;
     text-shadow: 2px 2px 4px rgb(0, 0, 0);
-    /* offsetX offsetY blurRadius color */
     font-weight: 600;
 
 }
 
 .Caixa_Inicial p {
     text-shadow: 2px 2px 4px rgb(0, 0, 0);
-    /* offsetX offsetY blurRadius color */
     color: white;
     letter-spacing: 2px;
     font-size: 30px;
@@ -233,7 +199,6 @@ h2 {
     color: white;
     z-index: 1;
     text-shadow: 2px 2px 4px rgb(0, 0, 0);
-    /* offsetX offsetY blurRadius color */
     font-weight: 600;
     background-color: #242024;
     text-align: center;
@@ -246,7 +211,6 @@ h3 {
     color: white;
     z-index: 1;
     text-shadow: 2px 2px 4px rgb(0, 0, 0);
-    /* offsetX offsetY blurRadius color */
     font-weight: 600;
     background-color: #242024;
     text-align: center;
@@ -259,7 +223,6 @@ h4 {
     color: white;
     z-index: 1;
     text-shadow: 2px 2px 4px rgb(0, 0, 0);
-    /* offsetX offsetY blurRadius color */
     font-weight: 600;
     background-color: #242024;
     text-align: center;
@@ -322,7 +285,10 @@ h4 {
     .Pizzas,
     .Pizzas_Doces {
         width: 50%;
-        /* ou 100%, dependendo do design desejado */
+    }
+
+    .Caixa_Sobre {
+        width: 100%;
     }
 
     .Caixa_Sobre h1 {
@@ -331,6 +297,7 @@ h4 {
 
     .Caixa_Sobre p {
         font-size: 12px;
+        width: 90%;
     }
 
     .Caixa_Sobre img {
@@ -345,24 +312,26 @@ h4 {
 
     .footer h5 {
         font-size: 1.1rem;
+        width: 90%;
+
+    }
+
+    .footer span {
+        font-size: 1.1rem;
+
     }
 
     .footer svg {
         width: 22px;
     }
 
-    .footer span {
-        font-size: 1.1rem;
-    }
 
-    /* Limpar floats para evitar problemas de layout */
     .clear {
         clear: both;
     }
 
 
 
-    /* Estilos adicionais conforme necessário */
 }
 
 
@@ -444,7 +413,6 @@ h4 {
     display: flex;
     justify-content: space-around;
     height: 100%;
-    /* Defina uma altura para o contêiner */
     scroll-snap-type: y mandatory;
     flex-wrap: wrap;
 }
@@ -454,33 +422,24 @@ h4 {
     display: flex;
     justify-content: space-around;
     height: 100%;
-    /* Defina uma altura para o contêiner */
     scroll-snap-type: y mandatory;
     flex-wrap: wrap;
 
 }
 
 
-/* Estilos para a barra de rolagem */
 ::-webkit-scrollbar {
     width: 5px;
-    /* largura da barra de rolagem */
 }
 
-/* Estilos para o polegar da barra de rolagem */
 ::-webkit-scrollbar-thumb {
     background-color: #5b5b5b;
-    /* cor do polegar */
     border-radius: 5px;
-    /* borda arredondada */
 }
 
-/* Estilos para o canto superior direito da barra de rolagem */
 ::-webkit-scrollbar-corner {
     background-color: #1d1d1d;
-    /* cor de fundo do canto */
     border-top-right-radius: 5px;
-    /* borda arredondada */
 }
 
 
@@ -491,7 +450,6 @@ section {
     top: 0;
     left: 0;
     align-items: center;
-
     justify-content: center;
 }
 
@@ -585,7 +543,6 @@ section {
 
 
 .Pizzas_Doces {
-
     background-color: rgba(109, 51, 45, 0.63);
     border: 01px solid rgb(41, 18, 16);
     border-radius: 4px;
@@ -596,9 +553,7 @@ section {
     margin-top: 20px;
     margin-right: 5px;
     min-width: 200px;
-    /* Defina uma largura mínima para evitar que os itens fiquem muito pequenos */
     flex: 0 0 auto;
-    /* Defina o tamanho flexível para que os itens não se estiquem */
 
 
 }
@@ -675,23 +630,22 @@ section {
 
 }
 
-footer {
+.footer {
     display: flex;
     justify-content: center;
     background-color: #1a1616;
     align-items: center;
 }
 
-footer h5 {
+.footer h5 {
     font-size: 25px;
     font-weight: 600;
     letter-spacing: 2px;
     color: #f1f1f1;
     text-shadow: 2px 2px 4px rgb(0, 0, 0);
-    /* offsetX offsetY blurRadius color */
 }
 
-footer svg {
+.footer svg {
     color: #eedfdf;
     margin-left: 20px;
 
@@ -703,5 +657,3 @@ footer svg {
 
 
 }
-
-
