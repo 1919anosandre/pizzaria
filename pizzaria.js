@@ -19,27 +19,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-//container do dia de promoções da pizzaria
-window.onload = function () {
-    const promocao = document.querySelector(".Promocao");
-    const data = new Date();
 
-    if (data.getDay() === 2) {
-        promocao.style.display = "flex";
-    }
-};
-
-document.addEventListener("DOMContentLoaded", function() {
-    const backgrounds = ["img/pizza2.jpg", "img/pizza4.jpg.jpg", "img/pizza.jpg"]; // Lista de URLs das imagens de fundo
+document.addEventListener("DOMContentLoaded", function () {
+    const backgrounds = ["img/pizza2.jpg", "img/pizza4.jpg", "img/pizza.jpg"]; // Lista de URLs das imagens de fundo
     let index = 0;
-  
+
     function changeBackground() {
-      document.body.style.backgroundImage = `url(${backgrounds[index]})`;
-      index = (index + 1) % backgrounds.length;
-      setTimeout(changeBackground, 3000); // Troca a imagem a cada 3 segundos
+        document.body.style.backgroundImage = `url(${backgrounds[index]})`;
+        index = (index + 1) % backgrounds.length;
+        setTimeout(changeBackground, 3000); // Troca a imagem a cada 3 segundos
     }
-  
+
     changeBackground(); // Inicia o slideshow
-  });
-  
-  
+});
+
