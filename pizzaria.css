@@ -29,9 +29,13 @@ html {
 body {
     margin: 0;
     height: 100vh;
-    background-size: cover;
+    width: 100vw;
+
     padding: 0;
-    background-image: url('img/pizza2.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background-image 0.5s ease;
 
 
 
@@ -266,8 +270,10 @@ h4 {
 
 @media all and (max-width: 767px) {
 
-
-    .Caixa_li_Principal {
+    .Inicio,
+    .Cardapio,
+    .Sobre,
+    .Caixa_li_Principal img {
         display: none;
     }
 
@@ -289,7 +295,8 @@ h4 {
         text-align: center;
 
     }
-    .Caixa_Inicial button{
+
+    .Caixa_Inicial button {
         text-align: center;
     }
 
@@ -302,11 +309,12 @@ h4 {
 
     }
 
-    h2 , h3 {
+    h2,
+    h3 {
         font-size: 25px;
     }
 
-   
+
 
 
 
@@ -330,21 +338,21 @@ h4 {
     }
 
     .footer {
-        display: flex;
-        flex-direction: column;
         width: 100%;
+        flex-direction: column;
+        text-align: center;
     }
 
     .footer h5 {
-        font-size: 10px;
+        font-size: 1.1rem;
     }
 
     .footer svg {
-        width: 20px;
+        width: 22px;
     }
 
     .footer span {
-        font-size: 11px;
+        font-size: 1.1rem;
     }
 
     /* Limpar floats para evitar problemas de layout */
@@ -363,22 +371,27 @@ h4 {
 
 @media all and (min-width: 768px) and (max-width: 1024px) {
 
-    /*estilo para tablets*/
-    .Caixa_Cardapio, .Caixa_Pizza_Doce {
+
+
+    .Caixa_Cardapio,
+    .Caixa_Pizza_Doce {
         width: 100%;
         flex-direction: colum;
         overflow-x: auto;
 
-        
+
     }
 
-    .Pizzas , .Pizzas_Doces{
+    .Pizzas,
+    .Pizzas_Doces {
         width: 20%;
     }
 
-  
 
-    .Caixa_li_Principal , .Caixa_Inicial , .Caixa_Sobre{
+
+    .Caixa_li_Principal,
+    .Caixa_Inicial,
+    .Caixa_Sobre {
         width: 100%;
     }
 
@@ -394,10 +407,11 @@ h4 {
         width: 50%;
     }
 
-  .Caixa_Inicial{
-    padding: 30px ;
+    .Caixa_Inicial {
+        padding: 30px;
 
-  }
+    }
+
     .Caixa_Inicial h1 {
         font-size: 30px;
     }
@@ -407,11 +421,11 @@ h4 {
     }
 
     .footer h5 {
-        font-size: 1.9rem;
+        font-size: 1.6rem;
     }
 
     .footer span {
-        font-size: 1.9rem;
+        font-size: 1.6rem;
     }
 
 }
@@ -689,8 +703,5 @@ footer svg {
 
 
 }
-
-
-
 
 
