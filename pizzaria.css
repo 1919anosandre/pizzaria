@@ -34,7 +34,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    transition: background-image 0.5s ease;
+    background-image: url('img/pizza2.jpg');
 
 
 
@@ -174,6 +174,21 @@ body {
 
 }
 
+.Caixa_Pedido {
+    background-color: #e6dcdc;
+    border-radius: 7px;
+    text-shadow: 10px 10px 10px black;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    z-index: 1;
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+}
+
 .Caixa_Inicial h1 {
     font-size: 50px;
     color: white;
@@ -284,7 +299,7 @@ h4 {
 
     .Pizzas,
     .Pizzas_Doces {
-        width: 50%;
+        width: 55%;
     }
 
     .Caixa_Sobre {
@@ -453,6 +468,25 @@ section {
     justify-content: center;
 }
 
+.Pizzas button {
+    background-color: #e0d0d0;
+    color: #141313;
+    border-radius: 7px;
+    width: 80%;
+    padding: 7px;
+    border: 01px solid rgb(51, 44, 44);
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+.Pizzas button:hover {
+    cursor: pointer;
+    background-color: #141313;
+    color: rgb(255, 226, 226);
+
+}
+
 .Pizzas h1 {
     color: rgb(255, 255, 255);
     font-size: 20px;
@@ -502,11 +536,11 @@ section {
     background-color: rgb(109, 51, 45);
     border: 01px solid rgb(41, 18, 16);
     border-radius: 4px;
-    height: 260px;
+    height: 288px;
     flex-direction: column;
     align-items: center;
     display: flex;
-    margin-top: 20px;
+    margin-top: 15px;
     margin-right: 5px;
     min-width: 200px;
     /* Defina uma largura mínima para evitar que os itens fiquem muito pequenos */
@@ -517,7 +551,7 @@ section {
 
 .Pizzas_Doces h1 {
     color: rgb(255, 255, 255);
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 1px;
     font-style: italic;
     letter-spacing: 1px;
@@ -546,16 +580,34 @@ section {
     background-color: rgba(109, 51, 45, 0.63);
     border: 01px solid rgb(41, 18, 16);
     border-radius: 4px;
-    height: 260px;
+    height: 288px;
     flex-direction: column;
     align-items: center;
     display: flex;
-    margin-top: 20px;
+    margin-top: 15px;
     margin-right: 5px;
     min-width: 200px;
     flex: 0 0 auto;
 
 
+}
+
+.Pizzas_Doces button {
+    background-color: #e0d0d0;
+    color: #141313;
+    border-radius: 7px;
+    width: 80%;
+    padding: 7px;
+    border: 01px solid rgb(51, 44, 44);
+    font-size: 15px;
+    letter-spacing: 2px;
+    margin-top: 5px;
+}
+
+.Pizzas_Doces button:hover {
+    cursor: pointer;
+    background-color: #141313;
+    color: rgb(255, 226, 226);
 }
 
 .Caixa_opções {
