@@ -19,17 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+//evento meu pedido mostrar na tela ao clicar em pedir ja 
+document.addEventListener('DOMContentLoaded', () => {
+    const Caixa_Pedido = document.querySelector('.Caixa_Pedido');
+    const PedirCalabresa = document.querySelector('#PedirCalabresa');
 
-document.addEventListener("DOMContentLoaded", function () {
-    const backgrounds = ["img/pizza2.jpg", "img/pizza4.jpg", "img/pizza.jpg"]; // Lista de URLs das imagens de fundo
-    let index = 0;
+    PedirCalabresa.addEventListener('click', () => {
+        Caixa_Pedido.style.display = 'flex';
+    })
 
-    function changeBackground() {
-        document.body.style.backgroundImage = `url(${backgrounds[index]})`;
-        index = (index + 1) % backgrounds.length;
-        setTimeout(changeBackground, 3000); // Troca a imagem a cada 3 segundos
-    }
-
-    changeBackground(); // Inicia o slideshow
-});
+})
 
