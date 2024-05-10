@@ -34,7 +34,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-image: url('img/pizza2.jpg');
+    background-image: url('img/pizza4.jpg');
 
 
 
@@ -173,6 +173,14 @@ body {
     padding: 40px 8%;
 
 }
+.Caixa_Inicial span{
+    color: white;
+    background-color: orangered;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    padding: 10px;
+}
 
 .Caixa_Pedido {
     background-color: #e6dcdc;
@@ -209,16 +217,14 @@ body {
 
 }
 
-h2 {
-    font-size: 35px;
-    color: white;
-    z-index: 1;
+.Caixa_Inicial  h2{
     text-shadow: 2px 2px 4px rgb(0, 0, 0);
-    font-weight: 600;
-    background-color: #242024;
-    text-align: center;
-    letter-spacing: 4px;
 
+    color: white;
+    letter-spacing: 2px;
+    font-size: 30px;
+    margin-top: 20px;
+    z-index: 1;
 }
 
 h3 {
@@ -246,6 +252,7 @@ h4 {
 }
 
 
+
 @media all and (max-width: 767px) {
 
     .Inicio,
@@ -257,6 +264,7 @@ h4 {
 
     .Caixa_Inicial {
         padding: 18px 8%;
+        width: 100%;
 
 
     }
