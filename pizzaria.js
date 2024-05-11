@@ -30,3 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })
 
+
+//o dia que nao abre a pizzaria exibir um alert indicando que nao atenderemos nesse dia
+
+let Dia = new Date();
+let exibir_dia = Dia.getDay();
+
+if(exibir_dia == 1){
+alert('Nao iremos atender hoje');
+}
