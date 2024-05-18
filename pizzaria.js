@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+ddocument.addEventListener("DOMContentLoaded", () => {
     const Inicio = document.querySelector(".Inicio");
     const Cardapio = document.querySelector(".Cardapio");
     const Sobre = document.querySelector(".Sobre");
@@ -28,18 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 });
-
-//evento meu pedido mostrar na tela ao clicar em pedir ja 
-document.addEventListener('DOMContentLoaded', () => {
-    const Caixa_Pedido = document.querySelector('.Caixa_Pedido');
-    const PedirCalabresa = document.querySelector('#PedirCalabresa');
-
-    PedirCalabresa.addEventListener('click', () => {
-        Caixa_Pedido.style.display = 'flex';
-    })
-
-})
-
 
 //o dia que nao abre a pizzaria exibir um alert indicando que nao atenderemos nesse dia
 
