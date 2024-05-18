@@ -77,13 +77,17 @@ nav {
 }
 
 
-.mobile-menu div {
+.mobile-menu .line1,
+.line2,
+.line3 {
     width: 32px;
     height: 2px;
     background: #fff;
     margin: 8px;
     transition: 0.3s;
+
 }
+
 
 .logo_pizzaria {
     font-size: 20px;
@@ -187,21 +191,6 @@ nav {
     padding: 10px;
 }
 
-.Caixa_Pedido {
-    background-color: #e6dcdc;
-    border-radius: 7px;
-    text-shadow: 10px 10px 10px black;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin: auto;
-    z-index: 1;
-    width: 100%;
-    max-width: 400px;
-    height: 300px;
-}
-
 .Caixa_Inicial h1 {
     font-size: 50px;
     color: white;
@@ -231,6 +220,24 @@ nav {
     z-index: 1;
 }
 
+.Caixa_Inicial button {
+    width: 20%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 07px;
+    border: 1px solid rgb(255, 255, 0);
+    padding: 15px;
+    margin-top: 15px;
+    letter-spacing: 1px;
+    color: rgb(241, 213, 213);
+    font-size: 20px;
+}
+
+.Caixa_Inicial button:hover {
+    cursor: pointer;
+    background-color: rgb(255, 255, 0);
+    color: #000000;
+}
+
 h3,
 h4 {
     font-size: 35px;
@@ -249,17 +256,11 @@ h4 {
         width: 100vw;
     }
 
-    .logo_pizzaria {
-        font-size: 20px;
-        flex-direction: column;
-        text-align: center;
-    }
-
     .nav-list {
         position: absolute;
         top: 8vh;
         right: 0;
-        width: 52vw;
+        width: 85vw;
         height: 92vh;
         background: #23232e;
         flex-direction: column;
@@ -270,6 +271,7 @@ h4 {
         z-index: 1;
     }
 
+
     .nav-list li {
         margin-left: 0;
         opacity: 0;
@@ -277,6 +279,13 @@ h4 {
 
     .mobile-menu {
         display: block;
+
+    }
+
+
+
+    .logo_pizzaria img {
+        animation: floatUpDown 3s ease-in-out infinite alternate;
 
     }
 }
@@ -313,6 +322,7 @@ h4 {
 
     .Caixa_Inicial button {
         text-align: center;
+        width: 70%;
     }
 
 
@@ -459,23 +469,7 @@ section {
     justify-content: center;
 }
 
-.Caixa_Inicial button {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 07px;
-    border: 1px solid rgb(255, 255, 0);
-    padding: 20px;
-    margin-top: 20px;
-    letter-spacing: 1px;
-    color: rgb(241, 213, 213);
-    font-size: 20px;
-}
 
-.Caixa_Inicial button:hover {
-    cursor: pointer;
-    background-color: rgb(255, 255, 0);
-    color: #000000;
-}
 
 .Caixa_Cardapio,
 .Caixa_Pizza_Doce {
@@ -492,11 +486,11 @@ section {
     background-color: rgba(109, 51, 45, 0.63);
     border: 01px solid rgb(41, 18, 16);
     border-radius: 4px;
-    height: 288px;
+    height: 260px;
     flex-direction: column;
     align-items: center;
     display: flex;
-    margin-top: 15px;
+    margin-top: 18px;
     margin-right: 5px;
     min-width: 200px;
     flex: 0 0 auto;
@@ -530,25 +524,7 @@ section {
     margin-top: 10px;
 }
 
-.Pizzas button,
-.Pizzas_Doces button {
-    background-color: #e0d0d0;
-    color: #141313;
-    border-radius: 7px;
-    width: 80%;
-    padding: 7px;
-    border: 1px solid rgb(51, 44, 44);
-    font-size: 15px;
-    letter-spacing: 2px;
-    margin-top: 5px;
-}
 
-.Pizzas button:hover,
-.Pizzas_Doces button:hover {
-    cursor: pointer;
-    background-color: #141313;
-    color: rgb(255, 226, 226);
-}
 
 .Caixa_opções {
     justify-content: space-around;
