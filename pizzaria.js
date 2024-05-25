@@ -1,12 +1,10 @@
-ddocument.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
     const Inicio = document.querySelector(".Inicio");
     const Cardapio = document.querySelector(".Cardapio");
     const Sobre = document.querySelector(".Sobre");
     const Caixa_Inicial = document.querySelector(".Caixa_Inicial");
     const Caixa_Cardapio = document.querySelector(".Caixa_Cardapio");
     const Caixa_Sobre = document.querySelector(".Caixa_Sobre");
-    const mobile_menu = document.querySelector(".mobile-menu");
-    const nav = document.querySelector(".nav-list");
 
     Inicio.addEventListener("click", () => {
         Caixa_Inicial.scrollIntoView({ behavior: "smooth" });
@@ -20,12 +18,7 @@ ddocument.addEventListener("DOMContentLoaded", () => {
         Caixa_Sobre.scrollIntoView({ behavior: "smooth" });
     });
 
-    mobile_menu.addEventListener("click", () => {
-        Caixa_Inicial.style.zIndex = '0';
-        nav.style.zIndex = '2';
-
-    })
-
+ 
 
 });
 
@@ -37,6 +30,7 @@ let exibir_dia = Dia.getDay();
 if (exibir_dia == 1) {
     alert('Nao iremos atender hoje');
 }
+
 
 class MobileNavbar {
     constructor(mobileMenu, navList, navLinks) {
@@ -81,4 +75,3 @@ const mobileNavbar = new MobileNavbar(
     ".nav-list li",
 );
 mobileNavbar.init();
-
