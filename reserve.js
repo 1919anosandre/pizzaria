@@ -4,70 +4,141 @@ const FormPix = document.querySelector('.FormPix');
 const FormDinheiro = document.querySelector('.FormDinheiro');
 const Forma_Pagamento_MeuPedido = document.querySelector('.Forma_Pagamento_MeuPedido');
 
-function Evento_Mostrar_Ocultar(){
-const Caixa_FormCartao = document.querySelector('.Caixa_FormCartao');
-const Caixa_FormPix = document.querySelector('.Caixa_FormPix');
-const Caixa_FormDinheiro = document.querySelector('.Caixa_FormDinheiro');
+function Evento_Mostrar_Ocultar() {
+    const Caixa_FormCartao = document.querySelector('.Caixa_FormCartao');
+    const Caixa_FormPix = document.querySelector('.Caixa_FormPix');
+    const Caixa_FormDinheiro = document.querySelector('.Caixa_FormDinheiro');
 
-document.addEventListener('DOMContentLoaded', () => {
-    Caixa_FormCartao.style.display = 'none';
-    Caixa_FormPix.style.display = 'none';
-    Caixa_FormDinheiro.style.display = 'none';
-    Finalizar.style.display = 'none';
+    document.addEventListener('DOMContentLoaded', () => {
+        Caixa_FormCartao.style.display = 'none';
+        Caixa_FormPix.style.display = 'none';
+        Caixa_FormDinheiro.style.display = 'none';
+        Finalizar.style.display = 'none';
 
-    FormCartao.addEventListener('click', () => {
-    Caixa_FormCartao.style.display = 'flex';
-    Caixa_FormPix.style.display = 'none';
-    Caixa_FormDinheiro.style.display = 'none';
-    FormCartao.style.border = '02px solid yellow';
-    FormPix.style.border = 'none';
-    FormDinheiro.style.border = 'none';
-    Finalizar.style.display = 'block';
-    Forma_Pagamento_MeuPedido.textContent = 'Forma de Pagamento selecionada : Cartão';
-
-
+        FormCartao.addEventListener('click', () => {
+            Caixa_FormCartao.style.display = 'flex';
+            Caixa_FormPix.style.display = 'none';
+            Caixa_FormDinheiro.style.display = 'none';
+            FormCartao.style.border = '02px solid yellow';
+            FormPix.style.border = 'none';
+            FormDinheiro.style.border = 'none';
+            Finalizar.style.display = 'block';
+            Forma_Pagamento_MeuPedido.textContent = 'Forma de Pagamento selecionada : Cartão';
 
 
-    
+
+
+
+        });
+
+        FormPix.addEventListener('click', () => {
+            Caixa_FormPix.style.display = 'flex';
+            Caixa_FormCartao.style.display = 'none';
+            Caixa_FormDinheiro.style.display = 'none';
+            FormPix.style.border = '02px solid yellow';
+            FormCartao.style.border = 'none';
+            FormDinheiro.style.border = 'none';
+            Finalizar.style.display = 'block';
+            Forma_Pagamento_MeuPedido.textContent = 'Forma de Pagamento selecionada : Pix';
+
+
+
+
+
+
+
+        });
+
+        FormDinheiro.addEventListener('click', () => {
+            Caixa_FormDinheiro.style.display = 'flex';
+            Caixa_FormCartao.style.display = 'none';
+            Caixa_FormPix.style.display = 'none';
+            FormDinheiro.style.border = '02px solid yellow';
+            FormPix.style.border = 'none';
+            FormCartao.style.border = 'none';
+            Finalizar.style.display = 'block';
+            Forma_Pagamento_MeuPedido.textContent = 'Forma de Pagamento selecionada : Dinheiro'
+
+
+
+
+
+
+        });
     });
-
-    FormPix.addEventListener('click', () => {
-    Caixa_FormPix.style.display = 'flex';
-    Caixa_FormCartao.style.display = 'none';
-    Caixa_FormDinheiro.style.display = 'none';
-    FormPix.style.border = '02px solid yellow';
-    FormCartao.style.border = 'none';
-    FormDinheiro.style.border = 'none';
-    Finalizar.style.display = 'block';
-    Forma_Pagamento_MeuPedido.textContent = 'Forma de Pagamento selecionada : Pix';
-
-
-
-
-
-
-
-    });
-
-    FormDinheiro.addEventListener('click', () => {
-    Caixa_FormDinheiro.style.display = 'flex';
-    Caixa_FormCartao.style.display = 'none';
-    Caixa_FormPix.style.display = 'none';
-    FormDinheiro.style.border = '02px solid yellow';
-    FormPix.style.border = 'none';
-    FormCartao.style.border = 'none';
-    Finalizar.style.display = 'block';
-    Forma_Pagamento_MeuPedido.textContent = 'Forma de Pagamento selecionada : Dinheiro'
-
-
-
-
-
-
-    });
-});
 };
 Evento_Mostrar_Ocultar();
+
+const Caixa_Formpag = document.querySelector('.Caixa_Formpag');
+const Caixa_Principal = document.querySelector('.Caixa_Principal')
+const Bebidas = document.querySelector('.Bebidas');
+const Tamanho = document.querySelector('.Tamanho');
+const Um_Saborimg = document.querySelector('#Um_Sabor');
+const Dois_Saboresimg = document.querySelector('#Dois_Sabores');
+const Tres_Saboresimg = document.querySelector('#Tres_Sabores');
+const Selecionado_Um_Sabor = document.querySelector('#Um_Sabor_selecionado');
+const Selecionado_Dois_Sabores = document.querySelector('#Dois_Sabores_selecionado');
+const Selecionado_Tres_Sabores = document.querySelector(' #tres_Sabores_selecionado')
+
+
+function Mostrar_Ocultar_CarregarPag() {
+    document.addEventListener('DOMContentLoaded', () => {
+        Selecionado_Um_Sabor.style.display = 'none';
+        Selecionado_Dois_Sabores.style.display = 'none';
+        Selecionado_Tres_Sabores.style.display = 'none';
+        Caixa_Formpag.style.opacity = '0'
+        Tamanho.style.display = 'none';
+        Bebidas.style.display = 'none';
+        Caixa_Principal.style.height = '200px';
+
+        Um_Saborimg.addEventListener('click', () => {
+            Selecionado_Um_Sabor.style.display = 'flex';
+            Selecionado_Dois_Sabores.style.display = 'none';
+            Selecionado_Tres_Sabores.style.display = 'none';
+
+
+            Caixa_Formpag.style.opacity = '1'
+            Tamanho.style.display = 'flex';
+            Bebidas.style.display = 'flex';
+            Caixa_Principal.style.height = '700px';
+        })
+
+        Dois_Saboresimg.addEventListener('click', () => {
+            Selecionado_Um_Sabor.style.display = 'flex';
+            Selecionado_Tres_Sabores.style.display = 'none';
+
+            Selecionado_Dois_Sabores.style.display = 'flex';
+            Caixa_Formpag.style.opacity = '1'
+            Tamanho.style.display = 'flex';
+            Bebidas.style.display = 'flex';
+            Caixa_Principal.style.height = '700px';
+        })
+
+        Tres_Saboresimg.addEventListener('click', () => {
+            Selecionado_Um_Sabor.style.display = 'flex';
+            Selecionado_Dois_Sabores.style.display = 'flex';
+
+            Selecionado_Tres_Sabores.style.display = 'flex';
+
+            Caixa_Formpag.style.opacity = '1'
+            Tamanho.style.display = 'flex';
+            Bebidas.style.display = 'flex';
+            Caixa_Principal.style.height = '700px';
+        })
+
+
+
+
+
+    })
+
+
+
+
+
+}
+Mostrar_Ocultar_CarregarPag()
+
 //validação de formularios 
 /*function Validar_Formularios() {
     const Validacao = document.querySelector('#Validação');
@@ -115,7 +186,12 @@ Validar_Formularios();
 const Finalizar = document.querySelector('.Finalizar_Pedido');
 const Select = document.getElementById('Tamanho_Pizza');
 const Primeira_Pizza = document.getElementById('Primeira_Pizza');
+const Segunda_Pizza = document.getElementById('Segunda_Pizza');
+const Terceira_Pizza = document.getElementById('Terceira_Pizza')
 const Pizza1 = document.querySelector('.Pizza1');
+const Pizza2 = document.querySelector('.Pizza2');
+const Pizza3 = document.querySelector('.Pizza3');
+
 const Tamanho_Pizza_MeuPedido = document.querySelector('.Tamanho_Pizza_MeuPedido');
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -134,18 +210,18 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         switch (Select.value) {
-          case 'Pequena':
-              Tamanho_Pizza_MeuPedido.textContent = 'Tamanho da Pizza : Pequena';
-              break;
-          case 'Media':
-              Tamanho_Pizza_MeuPedido.textContent = 'Tamanho da Pizza : Média';
-              break;
-          case 'Grande':
-              Tamanho_Pizza_MeuPedido.textContent = 'Tamanho da Pizza : Grande';
-              break;
-      }
+            case 'Pequena':
+                Tamanho_Pizza_MeuPedido.textContent = 'Tamanho da Pizza : Pequena';
+                break;
+            case 'Media':
+                Tamanho_Pizza_MeuPedido.textContent = 'Tamanho da Pizza : Média';
+                break;
+            case 'Grande':
+                Tamanho_Pizza_MeuPedido.textContent = 'Tamanho da Pizza : Grande';
+                break;
+        }
 
-      
+
 
     });
 
@@ -160,80 +236,138 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'Bacon':
                 Pizza1.textContent = 'Pizza de Bacon';
                 break;
-            // Adicione outros casos conforme necessário
+            case 'Atum':
+                Pizza1.textContent = 'Pizza de Bacon';
+                break;
+            case 'Baiana':
+                Pizza1.textContent = 'Pizza de Bacon';
+                break;
+            case 'Portuguesa':
+                Pizza1.textContent = 'Pizza de Bacon';
+                break;
+            case 'Frango':
+                Pizza1.textContent = 'Pizza de Bacon';
+                break;
+            case 'strogonoff':
+                Pizza1.textContent = 'Pizza de Bacon';
+                break;
+            case 'Moda':
+                Pizza1.textContent = 'Pizza de Bacon';
+                break;
+            case 'Fitness':
+                Pizza1.textContent = 'Pizza de Bacon';
+                break;
+            case 'Marguerita':
+                Pizza1.textContent = 'Pizza de Bacon';
+                break;
         }
+    })
 
-     
+    Segunda_Pizza.addEventListener('change', () => {
+        switch (Segunda_Pizza.value) {
+            case 'Calabresa':
+                Pizza2.textContent = 'Pizza de Calabresa';
+                break;
+            case 'Quatro_Queijos':
+                Pizza2.textContent = 'Pizza de Quatro Queijos';
+                break;
+            case 'Bacon':
+                Pizza2.textContent = 'Pizza de Bacon';
+                break;
+            case 'Atum':
+                Pizza2.textContent = 'Pizza de Bacon';
+                break;
+            case 'Baiana':
+                Pizza2.textContent = 'Pizza de Bacon';
+                break;
+            case 'Portuguesa':
+                Pizza2.textContent = 'Pizza de Bacon';
+                break;
+            case 'Frango':
+                Pizza2.textContent = 'Pizza de Bacon';
+                break;
+            case 'strogonoff':
+                Pizza2.textContent = 'Pizza de Bacon';
+                break;
+            case 'Moda':
+                Pizza2.textContent = 'Pizza de Bacon';
+                break;
+            case 'Fitness':
+                Pizza2.textContent = 'Pizza de Bacon';
+                break;
+            case 'Marguerita':
+                Pizza2.textContent = 'Pizza de Bacon';
+                break;
+
+        }
+    })
+
+    Terceira_Pizza.addEventListener('change', () => {
+        switch (Terceira_Pizza.value) {
+            case 'Calabresa':
+                Pizza3.textContent = 'Pizza de Calabresa';
+                break;
+            case 'Quatro_Queijos':
+                Pizza3.textContent = 'Pizza de Quatro Queijos';
+                break;
+            case 'Bacon':
+                Pizza3.textContent = 'Pizza de Bacon';
+                break;
+            case 'Atum':
+                Pizza3.textContent = 'Pizza de Bacon';
+                break;
+            case 'Baiana':
+                Pizza3.textContent = 'Pizza de Bacon';
+                break;
+            case 'Portuguesa':
+                Pizza3.textContent = 'Pizza de Bacon';
+                break;
+            case 'Frango':
+                Pizza3.textContent = 'Pizza de Bacon';
+                break;
+            case 'strogonoff':
+                Pizza3.textContent = 'Pizza de Bacon';
+                break;
+            case 'Moda':
+                Pizza3.textContent = 'Pizza de Bacon';
+                break;
+            case 'Fitness':
+                Pizza3.textContent = 'Pizza de Bacon';
+                break;
+            case 'Marguerita':
+                Pizza3.textContent = 'Pizza de Bacon';
+                break;
+        }
     });
-         
-      // evento mostrar e ocultar os principais containers
-      const Caixa_Principal = document.querySelector('.Caixa_Principal');
-      const Meu_Pedido = document.querySelector('.Meu_Pedido');
-  
-      Caixa_Principal.style.display = 'flex';
-      Meu_Pedido.style.display = 'none';
-  
-  // Definir a função handleFinalizarClick
-  function handleFinalizarClick() {
+
+
+    // evento mostrar e ocultar os principais containers
     const Caixa_Principal = document.querySelector('.Caixa_Principal');
     const Meu_Pedido = document.querySelector('.Meu_Pedido');
-    Meu_Pedido.style.display = 'flex';
-    Caixa_Principal.style.display = 'none';
-}
 
-// Adicionar o evento de clique ao botão Finalizar
-const Finalizar = document.querySelector('.Finalizar_Pedido');
-Finalizar.addEventListener('click', handleFinalizarClick);
+    Caixa_Principal.style.display = 'flex';
+    Meu_Pedido.style.display = 'none';
 
-// Verificar o horário de atendimento
-const Horario_Atendimento = new Date();
-let horario = Horario_Atendimento.getHours();
-if (horario >= 9) {
-    alert('Tudo certo, estamos abertos!');
-} else {
-    alert('O estabelecimento está fechado. Aberto das 18:00 às 01:00.');
-    // Remover o evento de clique do botão Finalizar
-    Finalizar.removeEventListener('click', handleFinalizarClick);
-}
-});
+    // Definir a função handleFinalizarClick
+    function handleFinalizarClick() {
+        const Caixa_Principal = document.querySelector('.Caixa_Principal');
+        const Meu_Pedido = document.querySelector('.Meu_Pedido');
+        Meu_Pedido.style.display = 'flex';
+        Caixa_Principal.style.display = 'none';
+    }
 
-//validações
-const numeroCartaoInput = document.getElementById('Numero_Cartao');
+    // Adicionar o evento de clique ao botão Finalizar
+    const Finalizar = document.querySelector('.Finalizar_Pedido');
+    Finalizar.addEventListener('click', handleFinalizarClick);
 
-function validarNumeroCartao() {
-    const numeroCartao = numeroCartaoInput.value.trim();
-
-    if (validarNumeroCartao(numeroCartao)) {
-        alert('Número do cartão válido!');
+    // Verificar o horário de atendimento
+    const Horario_Atendimento = new Date();
+    let horario = Horario_Atendimento.getHours();
+    if (horario >= 9) {
+        alert('Tudo certo, estamos abertos!');
     } else {
-        alert('Número do cartão inválido!');
+        alert('O estabelecimento está fechado. Aberto das 18:00 às 01:00.');
+        // Remover o evento de clique do botão Finalizar
+        Finalizar.removeEventListener('click', handleFinalizarClick);
     }
-}
-
-function validarNumeroCartao(numero) {
-    // Remover espaços em branco e hífens do número do cartão
-    numero = numero.replace(/\s/g, '').replace(/-/g, '');
-
-    if(numeroCartaoInput == ''){
-    alert(' Por Favor preencha seu numero do cartao ')
-    }
-
-    // Verificar se o número do cartão tem 16 dígitos
-    if (numero.length !== 16) {
-        return false;
-    }
-
-    // Aplicar o algoritmo de Luhn
-    let soma = 0;
-    for (let i = 0; i < 16; i++) {
-        let digit = parseInt(numero[i]);
-        if ((i % 2) === 0) {
-            digit *= 2;
-            if (digit > 9) {
-                digit -= 9;
-            }
-        }
-        soma += digit;
-    }
-    return (soma % 10) === 0;
-}
+});
