@@ -1,77 +1,40 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
-
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    list-style: none;
-    outline: none;
-    border: none;
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
     text-transform: capitalize;
-        user-select: none;
-
-}
-
-html {
-    width: 100vw;
-    height: 100vh;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+    border: none;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 body {
-    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
     height: 100vh;
-    width: 100vw;
-    padding: 0;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
-    background-image: url('img/pizza4.jpg');
+    background: linear-gradient(45deg, rgb(7, 20, 56) 60%, rgb(2, 2, 39) 40%);
 }
 
 
-a {
-    color: #fff;
-    text-decoration: none;
-    transition: 0.3s;
+
+::-webkit-scrollbar {
+    width: 5px;
 }
 
-a:hover {
-    opacity: 0.7;
+::-webkit-scrollbar-thumb {
+    background-color: #d6c5c5;
+    border-radius: 5px;
 }
 
-
+::-webkit-scrollbar-corner {
+    background-color: #0c0a0a;
+    border-top-right-radius: 5px;
+}
 
 nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    background: #23232e;
-    height: 12vh;
+    background-color: #0b0b20;
 }
 
-
-
-.nav-list {
-    list-style: none;
-    display: flex;
-}
-
-.nav-list li {
-    letter-spacing: 3px;
-    margin-left: 25px;
-    color: white;
-}
-
-.nav-list li img {
-    height: 8vh;
-}
 
 .mobile-menu {
     display: none;
@@ -90,525 +53,345 @@ nav {
 
 }
 
-
-.logo_pizzaria {
-    font-size: 20px;
-    letter-spacing: 2px;
-    display: flex;
-    align-items: center;
-    margin-right: 100px;
-    font-weight: 600;
-    font-style: italic;
-    animation: mudarCor 3s infinite;
-}
-
-.logo_pizzaria img {
-    animation: floatUpDown 3s ease-in-out infinite alternate;
-    margin-right: 10px;
-
-
-}
-
-.Inicio,
-.Cardapio,
-.Sobre {
-    padding: 20px;
-    font-size: 20px;
-    letter-spacing: 2px;
-    cursor: pointer;
-}
-
-@keyframes floatUpDown {
-    0% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(-20px);
-    }
-}
-
-@keyframes mudarCor {
-    0% {
-        color: red;
-    }
-
-    50% {
-        color: rgb(255, 187, 0);
-    }
-
-    100% {
-        color: orangered;
-    }
-}
-
-
-@keyframes navLinkFade {
-    from {
-        opacity: 0;
-        transform: translateX(50px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.mobile-menu.active .line1 {
-    transform: rotate(-45deg) translate(-8px, 8px);
-}
-
-.mobile-menu.active .line2 {
-    opacity: 0;
-}
-
-.mobile-menu.active .line3 {
-    transform: rotate(45deg) translate(-5px, -7px);
-}
-
-
-.Inicio:hover,
-.Cardapio:hover,
-.Sobre:hover {
-    border-bottom: 4px solid #ffc506;
-    color: #ffc506;
-}
-
-.Caixa_Inicial {
+main {
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    margin: 100px 0 auto;
-    padding: 40px 8%;
 }
-
-.Caixa_Inicial span {
-    color: white;
-    background-color: orangered;
-    font-size: 20px;
-    border-radius: 5px;
-    margin-top: 15px;
-    padding: 10px;
-}
-
-.Caixa_Inicial h1 {
-    font-size: 50px;
-    color: white;
-    letter-spacing: 2px;
-    z-index: 1;
-    text-shadow: 2px 2px 4px rgb(0, 0, 0);
-    font-weight: 600;
-
-}
-
-.Caixa_Inicial p {
-    text-shadow: 2px 2px 4px rgb(0, 0, 0);
-    color: white;
-    letter-spacing: 2px;
-    font-size: 30px;
-    margin-top: 50px;
-    z-index: 1;
-
-}
-
-.Caixa_Inicial h2 {
-    text-shadow: 2px 2px 4px rgb(0, 0, 0);
-    color: white;
-    letter-spacing: 2px;
-    font-size: 30px;
-    margin-top: 20px;
-    z-index: 1;
-}
-
-.Caixa_Inicial button {
-    width: 20%;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 07px;
-    border: 1px solid rgb(54, 54, 49);
-    padding: 15px;
-    margin-top: 15px;
-    letter-spacing: 1px;
-    color: rgb(241, 213, 213);
-    font-size: 20px;
-}
-
-.Caixa_Inicial button:hover {
-    cursor: pointer;
-    background-color: rgb(27, 27, 24);
-    color: rgb(241, 213, 213);
-    border: 1px solid rgb(57, 59, 50);
-
-
-}
-
-h3,
-h4 {
-    font-size: 35px;
-    color: white;
-    z-index: 1;
-    text-shadow: 2px 2px 4px rgb(0, 0, 0);
-    font-weight: 600;
-    background-color: #242024;
-    text-align: center;
-    letter-spacing: 4px;
-
-}
-
-    
-
-
-
-@media all and (max-width: 767px) {
-    .nav-list {
-        position: absolute;
-        top: 8vh;
-        width: 85vw;
-        height: 92vh;
-        display: flex; /* Make it a flex container */
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        z-index: 2;
-
-    }
-    
-    .nav-list li {
-        margin-left: 0;
-        opacity: 0;
-    }
-    
-    .mobile-menu {
-        display: block;
-
-    }
-
-
-
-    .logo_pizzaria img {
-        animation: floatUpDown 3s ease-in-out infinite alternate;
-
-    }
-
-
-
-
-    .Caixa_Inicial {
-        padding: 18px 8%;
-        width: 100%;
-
-
-    }
-
-    .Caixa_Inicial h1 {
-        width: 70%;
-        font-size: 30px;
-        text-align: center;
-    }
-
-    .Caixa_Inicial p {
-        width: 70%;
-        font-size: 17px;
-        text-align: center;
-
-    }
-
-    .Caixa_Inicial button {
-        text-align: center;
-        width: 70%;
-    }
-
-
-    .Caixa_Cardapio,
-    .Caixa_Pizza_Doce {
-        width: 100%;
-        overflow-y: auto;
-    }
-
-    h2,
-    h3 {
-        font-size: 25px;
-    }
-
-  
-    .Caixa_Sobre {
-        width: 100%;
-    }
-
-    .Caixa_Sobre h1 {
-        font-size: 20px;
-    }
-
-    .Caixa_Sobre p {
-        font-size: 12px;
-        width: 90%;
-    }
-
-    .Caixa_Sobre img {
-        max-width: 30px;
-        padding: 10px 4%;
-    }
-
-    .footer {
-        width: 100%;
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer h5 {
-        font-size: 1.1rem;
-        width: 90%;
-
-    }
-
-    .footer span {
-        font-size: 1.1rem;
-
-    }
-
-    .footer svg {
-        width: 22px;
-    }
-
-    .clear {
-        clear: both;
-    }
-}
-.nav-list.active {
-    transform: translateX(0);
-    background: #23232e;
-}
-
-
-@media all and (min-width: 768px) and (max-width:  992px) {
-  nav-list{
- width: 100%;
-  }
-  nav-list li{
-    margin-left: 50px;
-  }
-
-
-    .Caixa_Cardapio,
-    .Caixa_Pizza_Doce {
-        width: 100%;
-        flex-direction: colum;
-        overflow-x: auto;
-
-
-    }
-
-    
-
-
-
-    .Caixa_Inicial,
-    .Caixa_Sobre {
-        width: 100%;
-    }
-
-    section {
-        width: 100vw;
-    }
-
-    .Caixa_Sobre p {
-        width: 80%;
-    }
-
-    .Caixa_Sobre img {
-        width: 50%;
-    }
-
-    .Caixa_Inicial {
-        padding: 30px;
-
-    }
-
-    .Caixa_Inicial h1 {
-        font-size: 30px;
-    }
-
-    .Caixa_Inicial p {
-        font-size: 25px;
-    }
-
-    .footer h5,
-    .footer span {
-        font-size: 1.6rem;
-    }
-
-}
-
-
-::-webkit-scrollbar {
-    width: 5px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #5b5b5b;
-    border-radius: 5px;
-}
-
-::-webkit-scrollbar-corner {
-    background-color: #1d1d1d;
-    border-top-right-radius: 5px;
-}
-
 
 section {
     scroll-snap-align: start;
     position: sticky;
-    height: 100%;
+    height: 100vh;
+
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul .ContainerNav {
+    display: flex;
+    justify-content: space-around;
     top: 0;
-    left: 0;
-    align-items: center;
-    justify-content: center;
+    margin-left: 60px;
 }
 
-
-
-.Caixa_Cardapio,
-.Caixa_Pizza_Doce {
-    background-color: rgb(59, 57, 57);
-    display: flex;
-    justify-content: space-around;
-    height: 100%;
-    scroll-snap-type: y mandatory;
-    flex-wrap: wrap;
-}
-
-.Pizzas,
-.Pizzas_Doces {
-    background-color: rgba(109, 51, 45, 0.63);
-    border: 01px solid rgb(41, 18, 16);
-    border-radius: 4px;
-    height: 260px;
-    flex-direction: column;
-    align-items: center;
-    display: flex;
-    margin-top: 18px;
-    margin-right: 5px;
-    min-width: 200px;
-    flex: 0 0 auto;
-
-}
-
-.Pizzas_Doces h1,
-.Pizzas h1 {
+nav ul .ContainerNav li {
+    list-style: none;
     color: rgb(255, 255, 255);
-    font-size: 18px;
-    letter-spacing: 1px;
-    font-style: italic;
-    letter-spacing: 1px;
-
-
-}
-
-.Pizzas_Doces p,
-.Pizzas p {
-    color: #f1f1f1;
-    font-size: 16px;
-    letter-spacing: 1px;
-    margin-top: 10px;
-
-
-}
-
-.Pizzas_Doces img,
-.Pizzas img {
-    height: 120px;
-    margin-top: 10px;
-}
-
-
-
-.Caixa_opções {
-    justify-content: space-around;
-    display: flex;
-    padding: 10px;
-    margin-top: 10px;
-    width: 100%;
-    background-color: #302525;
     font-size: 1.5rem;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-left: 25px;
+
 }
 
-.Caixa_opções li {
-    color: #ffffff;
-    padding: 5px;
-    letter-spacing: 2px;
-    font-style: italic;
-}
-
-.Caixa_opções li:hover {
-    color: rgb(121, 91, 46);
+nav ul .ContainerNav li:hover {
     cursor: pointer;
-    transition: 1 s ease;
+    transform: scale(1.05);
+    transition: .3s;
+
 }
 
-.Caixa_Sobre {
+nav ul .ContainerNav img {
+    margin-right: 130px;
+    width: 70px;
+
+}
+
+
+
+
+.Container-Principal {
     display: flex;
-    justify-content: center;
-    background-color: #302525;
+    justify-content: space-around;
     align-items: center;
-    height: 100%;
+    margin: 100px auto;
+}
+
+.Container-Principal,
+.Texto h1,
+h2 {
+    color: rgb(255, 255, 255);
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.5);
+}
+
+.Container-Principal,
+.Texto p {
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+.Container-Principal img {
+    height: 400px;
+    width: 100%;
+    max-width: 400px;
+    margin-right: 10px;
+}
+
+.Container-Receitas {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #010318;
+    scroll-snap-type: y mandatory;
+
+    height: 100vh;
+}
+
+.Receitas {
+    background-color: #0c0909;
+    max-width: 380px;
+    width: 100%;
+    height: 300px;
     flex-direction: column;
+    margin-top: 7px;
+    border-radius: 7px;
+    border: 2px solid #080707;
+    overflow-x: auto;
+
+}
+
+.Receitas h1 {
+    color: orangered;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.Receitas p {
+    color: rgb(255, 255, 255);
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 5px 4%;
+    text-align: center;
+
+}
+
+.Receitas img {
+    max-width: 290px;
+    width: 100%;
+    height: auto;
+    padding: 0 10%;
+    margin-top: 5px;
+
+}
+
+.Container-EmagrecerTrinta {
+    display: flex;
+    background-color: #010318;
+    height: 100%;
     scroll-snap-type: y mandatory;
 
 
 }
 
-.Caixa_Sobre h1 {
-    font-size: 40px;
-    text-align: center;
-    font-weight: 600;
-    font-style: italic;
-    letter-spacing: 2px;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-
-}
-
-.Caixa_Sobre p {
-    letter-spacing: 2px;
-    color: white;
-    font-size: 18px;
-    margin-top: 20px;
-    text-align: center;
-}
-
-.Caixa_Sobre img {
+.Container-EmagrecerTrinta img {
+    height: 400px;
     width: 100%;
-    margin-top: 15px;
-    max-width: 480px;
-    border-radius: 10px;
-
+    max-width: 400px;
+    margin-right: 10px;
+    margin-top: 20px;
 }
 
-.footer {
-    display: flex;
-    justify-content: center;
-    background-color: #1a1616;
+
+.Texto {
+    padding: 5px 4%;
     align-items: center;
 }
 
-.footer h5 {
-    font-size: 25px;
-    font-weight: 600;
+.Texto h3 {
+    text-align: center;
+    color: yellow;
+    font-size: 1.6rem;
+    font-weight: 700;
     letter-spacing: 2px;
-    color: #f1f1f1;
-    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+
 }
 
-.footer svg {
-    color: #eedfdf;
-    margin-left: 20px;
+.Texto p {
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    font-weight: 600;
+
 }
 
-.footer span {
-    margin-left: 10px;
-    color: #eedfdf;
+h4 {
+    color: rgb(246, 255, 252);
+    text-align: center;
+    background-color: #010318;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.Container-Exercicios , .Container-Treino{
+    display: flex;
+    justify-content: space-around;
+    background-color: #03031a;
+    flex-wrap: wrap;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+
+
+}
+
+.Exercicios , .Exercicios-Treino {
+    background-color: #0c0909;
+    max-width: 320px;
+    width: 100%;
+    height: 290px;
+    flex-direction: column;
+    margin-top: 10px;
+    border-radius: 7px;
+    border: 2px solid #161616;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Exercicios h1 , .Exercicios-Treino {
+    color: rgb(14, 255, 134);
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+
+
+.Exercicios img , .Exercicios-Treino {
+    width: 100%;
+    max-width: 260px;
+    height: auto;
+    margin-top: 8px;
+}
+
+.Exercicios img:hover , .Exercicios-Treino img:hover {
+    transform: scale(1.05);
+    transition: 2s;
+}
+
+.Exercicios button, .Exercicios-Treino button{
+    width: 50%;
+    background-color: rgb(8, 8, 8);
+    color: #ccc;
+    border-radius: 7px;
+    border: 1px solid rgb(9, 87, 9);
+    padding: 6px 10%;
+    margin-top: 8px;
+}
+
+.Exercicios button:hover ,  .Exercicios-Treino {
+    cursor: pointer;
+    transform: scale(1.01);
+    transition: 2s;
+    background-color: rgb(14, 255, 134);
+    border: 1px solid rgb(8, 8, 8);
+    color: #000;
+
+}
+
+
+
+.Container-Contato {
+    flex-direction: column;
+    display: flex;
+    height: 100%;
+}
+
+.Container-Contato input {
+    background-color: red;
+    border: 2px solid #fff;
+}
+
+
+
+
+@media all and (max-width: 767px) {
+
+    .ContainerNav {
+        top: 8vh;
+        width: 85vw;
+        height: 92vh;
+        display: flex;
+        /* Make it a flex container */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+        position: absolute;
+    }
+
+    .ContainerNav li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+
+
+    .mobile-menu {
+        display: block;
+        text-align: center;
+
+    }
+
+    .Exercicios , .Exercicios-Treino {
+        width: 80%;
+    }
+
+
+
+    .Container-Principal {
+        padding: 0 10%;
+        flex-direction: column;
+    }
+
+    .Receitas {
+        width: 70%;
+    }
+
+    .Receitas h1 {
+        font-size: 1.1rem;
+
+    }
+
+    .Receitas p {
+        font-size: 1.0rem;
+    }
+
+    .Container-Principal h1 {
+        font-size: 1.4rem;
+    }
+
+    .Container-Principal p {
+        font-size: 1.1rem;
+    }
+
+    .Container-EmagrecerTrinta {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .Container-Exercicios , .Container-Treino {
+        overflow-y: auto;
+    }
+
+    .Container-EmagrecerTrinta img {
+        padding: 10px 4%;
+        width: 80%;
+    }
+
+    .Texto {
+        padding: 0 10%;
+    }
 }
