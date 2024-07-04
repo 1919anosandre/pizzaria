@@ -21,17 +21,17 @@
         <div class="line2"></div>
         <div class="line3"></div>
       </div>
-    
+
       <ul class="nav-list">
         <li class="logo_pizzaria"> <img src="img/pizza1-removebg-preview.png" alt="pizza1">PizzariaDev</li>
         <li class="Inicio">início</li>
         <li class="Cardapio">cardápio</li>
         <li class="Sobre">sobre</li>
-        <li> <a href="https://www.facebook.com/andre.moura.56027281"><img src="img/logoface.jpg" alt="logoface"></li>
-        </a>
-        <li> <a href="https://www.instagram.com/andre_mouraa19/?hl=pt_"><img src="img/logoinsta.jpg" alt="logoinsta">
+        <li id="Carrinho">
+          <span class="Quantidade-Pedido-Carrinho">0</span>
+          <img src="img/carrinho.webp" alt="carrinho">
         </li>
-        </a>
+
         <li><a href="https://github.com/1919anosandre"><img src="img/git.jgp-removebg-preview.png" alt="logowaths"></li>
         </a>
       </ul>
@@ -51,139 +51,200 @@
   </div>
 
   <h3>Pizzas Salgadas</h3>
-
-
-
-  <section>
-    <div class="Caixa_Cardapio">
-
-
-
-
-      <div class="Pizzas">
-        <h1>calabresa</h1>
-        <p>4 pedaços <span>R$ 22,00</span></p>
-        <p>8 pedaços <span>R$ 44,00</span></p>
-        <p>12 pedaços <span>R$ 66,00</span></p>
-        <img src="img/pizzaCalabresa.png" alt="PizzaCalabresa">
+  <div id="Caixa-Pedido">
+    <div id="Itens-Carrinho">
+      <div class="item">
+        <div class="Calabresa">
+          <img src="img/pizzaCalabresa.png" alt="calabresa">
+          <h1>Calabresa</h1>
+          <select name="Tamanho-Pizza" class="Tamanho_Pizza">
+            <option value="Pequena">Pequena</option>
+            <option value="Media">Média</option>
+            <option value="Grande">Grande</option>
+          </select>
+          <div class="itens-Preco-Quantidade">
+            <span class="Preco">R$ 0,00</span>
+            <input type="number" class="Quantidade" min="1" max="10" value="1">
+          </div>
+        </div>
       </div>
-
-      <div class="Pizzas">
-        <h1>frango</h1>
-        <p>4 pedaços <span>R$ 22,00</span></p>
-        <p>8 pedaços <span>R$ 44,00</span></p>
-        <p>12 pedaços <span> R$ 66,00</span></p>
-        <img src="img/pizzafrango.png" alt="PizzaFrango">
-
-
+      <div class="item">
+        <div class="Bacon">
+          <img src="img/pizzabacon-removebg-preview.png" alt="bacon">
+          <h1>Bacon</h1>
+          <select name="Tamanho-Pizza" class="Tamanho_Pizza">
+            <option value="Pequena">Pequena</option>
+            <option value="Media">Média</option>
+            <option value="Grande">Grande</option>
+          </select>
+          <div class="itens-Preco-Quantidade">
+            <span class="Preco">R$ 0,00</span>
+            <input type="number" class="Quantidade" min="1" max="10" value="1">
+          </div>
+        </div>
       </div>
-
-      <div class="Pizzas">
-        <h1>bacon</h1>
-        <p>4 pedaços<span> R$ 22,00</span></p>
-        <p>8 pedaços <span>R$ 44,00</span></p>
-        <p>12 pedaços <span>R$ 66,00</span></p>
-        <img src="img/pizzabacon-removebg-preview.png" alt="PizzaBacon">
-
-
+      <div class="item">
+        <div class="Frango">
+          <img src="img/pizzafrango.png" alt="frango">
+          <h1>Frango</h1>
+          <select name="Tamanho-Pizza" class="Tamanho_Pizza">
+            <option value="Pequena">Pequena</option>
+            <option value="Media">Média</option>
+            <option value="Grande">Grande</option>
+          </select>
+          <div class="itens-Preco-Quantidade">
+            <span class="Preco">R$ 0,00</span>
+            <input type="number" class="Quantidade" min="1" max="10" value="1">
+          </div>
+        </div>
       </div>
+    </div>
+    <button id="Finalizar-Pedido">Finalizar Pedido</button>
+  </div>
+
+
+  <div class="Caixa_Cardapio">
 
 
 
-      <div class="Pizzas">
-        <h1>strogonoff</h1>
-        <p>4 pedaços <span>R$ 22,00</span></p>
-        <p>8 pedaços <span>R$ 44,00</span></p>
-        <p>12 pedaços <span>R$ 66,00</span></p>
-        <img src="img/pizzastrogonoff-removebg-preview.png" alt="Pizza4Queijos">
 
-      </div>
+    <div class="Pizzas">
+      <h1>calabresa</h1>
+      <p>4 pedaços <span>R$ 22,00</span></p>
+      <p>8 pedaços <span>R$ 44,00</span></p>
+      <p>12 pedaços <span>R$ 66,00</span></p>
+      <img src="img/pizzaCalabresa.png" alt="PizzaCalabresa">
+      <button id="Adicionar-Calabresa">adicionar ao carrinho</button>
+    </div>
 
-
-
-      <div class="Pizzas">
-        <h1> moda da casa</h1>
-        <p>4 pedaços <span>R$ 22,00</span></p>
-        <p>8 pedaços <span>R$ 44,00</span></p>
-        <p>12 pedaços <span>R$ 66,00</span></p>
-        <img src="img/pizzamodacasa-removebg-preview.png" alt="Pizza4Queijos">
-
-      </div>
-
-
-      <div class="Pizzas">
-        <h1> portuguesa</h1>
-        <p>4 pedaços <span>R$ 22,00</span></p>
-        <p>8 pedaços <span>R$ 44,00</span></p>
-        <p>12 pedaços <span>R$ 66,00</span></p>
-        <img src="img/pizzaportuguesa-removebg-preview.png" alt="Pizza4Queijos">
-
-      </div>
-
-
-
-      <div class="Pizzas">
-        <h1> marguerita</h1>
-        <p>4 pedaços <span>R$ 22,00</span></p>
-        <p>8 pedaços <span>R$ 44,00</span></p>
-        <p>12 pedaços <span>R$ 66,00</span></p>
-        <img src="img/pizzamargerita-removebg-preview.png" alt="Pizza4Queijos">
-
-      </div>
-
-
-
-      <div class="Pizzas">
-        <h1> lombo</h1>
-        <p>4 pedaços <span>R$ 22,00</span></p>
-        <p>8 pedaços <span>R$ 44,00</span></p>
-        <p>12 pedaços <span>R$ 66,00</span></p>
-        <img src="img/pizzalombo-removebg-preview.png" alt="Pizza4Queijos">
-
-      </div>
-
-
-      <div class="Pizzas">
-        <h1> atum</h1>
-        <p>4 pedaços <span>R$ 22,00</span></p>
-        <p>8 pedaços <span>R$ 44,00</span></p>
-        <p>12 pedaços <span>R$ 66,00</span></p>
-        <img src="img/pizzaatum-removebg-preview.png" alt="Pizza4Queijos">
-
-      </div>
-
-      <div class="Pizzas">
-        <h1> baiana</h1>
-        <p>4 pedaços <span>R$ 22,00</span></p>
-        <p>8 pedaços <span>R$ 44,00</span></p>
-        <p>12 pedaços <span>R$ 66,00</span></p>
-        <img src="img/pizzabaiana-removebg-preview.png" alt="Pizza4Queijos">
-
-      </div>
-
-      <div class="Pizzas">
-        <h1> fitness</h1>
-        <p>4 pedaços <span>R$ 22,00</span></p>
-        <p>8 pedaços <span>R$ 44,00</span></p>
-        <p>12 pedaços <span>R$ 66,00</span></p>
-        <img src="img/pizzafit-removebg-preview_out.png" alt="Pizza4Queijos">
-
-      </div>
-
-      <div class="Pizzas">
-        <h1> quatro queijos</h1>
-        <p>4 pedaços <span>R$ 22,00</span></p>
-        <p>8 pedaços <span>R$ 44,00</span></p>
-        <p>12 pedaços <span>R$ 66,00</span></p>
-        <img src="img/pizza4queijos-removebg-preview-removebg-preview.png" alt="Pizza4Queijos">
-
-      </div>
-
-
+    <div class="Pizzas">
+      <h1>frango</h1>
+      <p>4 pedaços <span>R$ 22,00</span></p>
+      <p>8 pedaços <span>R$ 44,00</span></p>
+      <p>12 pedaços <span> R$ 66,00</span></p>
+      <img src="img/pizzafrango.png" alt="PizzaFrango">
+      <button id="Adicionar-Frango">adicionar ao carrinho</button>
 
 
 
     </div>
+
+    <div class="Pizzas">
+      <h1>bacon</h1>
+      <p>4 pedaços<span> R$ 22,00</span></p>
+      <p>8 pedaços <span>R$ 44,00</span></p>
+      <p>12 pedaços <span>R$ 66,00</span></p>
+      <img src="img/pizzabacon-removebg-preview.png" alt="PizzaBacon">
+      <button id="Adicionar-Bacon">adicionar ao carrinho</button>
+
+
+    </div>
+
+
+
+    <div class="Pizzas">
+      <h1>strogonoff</h1>
+      <p>4 pedaços <span>R$ 22,00</span></p>
+      <p>8 pedaços <span>R$ 44,00</span></p>
+      <p>12 pedaços <span>R$ 66,00</span></p>
+      <img src="img/pizzastrogonoff-removebg-preview.png" alt="Pizza4Queijos">
+      <button id="Adicionar-Strogonoff">adicionar ao carrinho</button>
+
+    </div>
+
+
+
+    <div class="Pizzas">
+      <h1> moda da casa</h1>
+      <p>4 pedaços <span>R$ 22,00</span></p>
+      <p>8 pedaços <span>R$ 44,00</span></p>
+      <p>12 pedaços <span>R$ 66,00</span></p>
+      <img src="img/pizzamodacasa-removebg-preview.png" alt="Pizza4Queijos">
+      <button id="Adicionar-Moda">adicionar ao carrinho</button>
+
+    </div>
+
+
+    <div class="Pizzas">
+      <h1> portuguesa</h1>
+      <p>4 pedaços <span>R$ 22,00</span></p>
+      <p>8 pedaços <span>R$ 44,00</span></p>
+      <p>12 pedaços <span>R$ 66,00</span></p>
+      <img src="img/pizzaportuguesa-removebg-preview.png" alt="Pizza4Queijos">
+      <button id="Adicionar-Calabresa">adicionar ao carrinho</button>
+
+    </div>
+
+
+
+    <div class="Pizzas">
+      <h1> marguerita</h1>
+      <p>4 pedaços <span>R$ 22,00</span></p>
+      <p>8 pedaços <span>R$ 44,00</span></p>
+      <p>12 pedaços <span>R$ 66,00</span></p>
+      <img src="img/pizzamargerita-removebg-preview.png" alt="Pizza4Queijos">
+      <button id="Adicionar-Calabresa">adicionar ao carrinho</button>
+
+    </div>
+
+
+
+    <div class="Pizzas">
+      <h1> lombo</h1>
+      <p>4 pedaços <span>R$ 22,00</span></p>
+      <p>8 pedaços <span>R$ 44,00</span></p>
+      <p>12 pedaços <span>R$ 66,00</span></p>
+      <img src="img/pizzalombo-removebg-preview.png" alt="Pizza4Queijos">
+      <button id="Adicionar-Calabresa">adicionar ao carrinho</button>
+
+    </div>
+
+
+    <div class="Pizzas">
+      <h1> atum</h1>
+      <p>4 pedaços <span>R$ 22,00</span></p>
+      <p>8 pedaços <span>R$ 44,00</span></p>
+      <p>12 pedaços <span>R$ 66,00</span></p>
+      <img src="img/pizzaatum-removebg-preview.png" alt="Pizza4Queijos">
+      <button id="Adicionar-Calabresa">adicionar ao carrinho</button>
+
+    </div>
+
+    <div class="Pizzas">
+      <h1> baiana</h1>
+      <p>4 pedaços <span>R$ 22,00</span></p>
+      <p>8 pedaços <span>R$ 44,00</span></p>
+      <p>12 pedaços <span>R$ 66,00</span></p>
+      <img src="img/pizzabaiana-removebg-preview.png" alt="Pizza4Queijos">
+      <button id="Adicionar-Calabresa">adicionar ao carrinho</button>
+
+    </div>
+
+    <div class="Pizzas">
+      <h1> fitness</h1>
+      <p>4 pedaços <span>R$ 22,00</span></p>
+      <p>8 pedaços <span>R$ 44,00</span></p>
+      <p>12 pedaços <span>R$ 66,00</span></p>
+      <img src="img/pizzafit-removebg-preview_out.png" alt="Pizza4Queijos">
+      <button id="Adicionar-Calabresa">adicionar ao carrinho</button>
+
+    </div>
+
+    <div class="Pizzas">
+      <h1> quatro queijos</h1>
+      <p>4 pedaços <span>R$ 22,00</span></p>
+      <p>8 pedaços <span>R$ 44,00</span></p>
+      <p>12 pedaços <span>R$ 66,00</span></p>
+      <img src="img/pizza4queijos-removebg-preview-removebg-preview.png" alt="Pizza4Queijos">
+      <button id="Adicionar-Calabresa">adicionar ao carrinho</button>
+
+    </div>
+
+
+
+
+
+  </div>
   </section>
   <h4>Pizzas Doces</h4>
 
@@ -195,6 +256,7 @@
         <p>8 pedaços <span>R$ 44,00</span></p>
         <p>12 pedaços <span>R$ 66,00</span></p>
         <img src="img/morango_choco-removebg-preview-removebg-preview.png" alt="PizzaMorango">
+        <button id="Adicionar-Calabresa">adicionar ao carrinho</button>
 
 
       </div>
@@ -205,6 +267,7 @@
         <p>8 pedaços <span>R$ 44,00</span></p>
         <p>12 pedaços <span>R$ 66,00</span></p>
         <img src="img/chocolate.branco-removebg-preview.png" alt="PizzaChocolateBranco">
+        <button id="Adicionar-Calabresa">adicionar ao carrinho</button>
 
 
       </div>
@@ -215,6 +278,7 @@
         <p>8 pedaços <span>R$ 44,00</span></p>
         <p>12 pedaços <span>R$ 66,00</span></p>
         <img src="img/disquete-removebg-preview-removebg-preview.png" alt="PizzaDisquete">
+        <button id="Adicionar-Calabresa">adicionar ao carrinho</button>
 
 
       </div>
@@ -225,6 +289,7 @@
         <p>8 pedaços <span>R$ 44,00</span></p>
         <p>12 pedaços <span>R$ 66,00</span></p>
         <img src="img/bombom-removebg-preview.png" alt="PizzaBombom">
+        <button id="Adicionar-Calabresa">adicionar ao carrinho</button>
 
 
       </div>
@@ -235,6 +300,7 @@
         <p>8 pedaços <span>R$ 44,00</span></p>
         <p>12 pedaços <span>R$ 66,00</span></p>
         <img src="img/romeujulieta-removebg-preview.png" alt="PizzaBombom">
+        <button id="Adicionar-Calabresa">adicionar ao carrinho</button>
 
 
       </div>
@@ -245,6 +311,7 @@
         <p>8 pedaços <span>R$ 44,00</span></p>
         <p>12 pedaços <span>R$ 66,00</span></p>
         <img src="img/prestigio-removebg-preview.png" alt="PizzaBombom">
+        <button id="Adicionar-Calabresa">adicionar ao carrinho</button>
 
 
       </div>
@@ -255,6 +322,7 @@
         <p>8 pedaços <span>R$ 44,00</span></p>
         <p>12 pedaços <span>R$ 66,00</span></p>
         <img src="img/bananacanela-removebg-preview.png" alt="PizzaBombom">
+        <button id="Adicionar-Calabresa">adicionar ao carrinho</button>
 
 
       </div>
@@ -265,6 +333,7 @@
         <p>8 pedaços <span>R$ 44,00</span></p>
         <p>12 pedaços <span>R$ 66,00</span></p>
         <img src="img/sorvete-removebg-preview.png" alt="PizzaBombom">
+        <button id="Adicionar-Calabresa">adicionar ao carrinho</button>
 
 
       </div>
@@ -275,6 +344,7 @@
         <p>8 pedaços <span>R$ 44,00</span></p>
         <p>12 pedaços <span>R$ 66,00</span></p>
         <img src="img/dois-amores.png" alt="PizzaBombom">
+        <button id="Adicionar-Calabresa">adicionar ao carrinho</button>
 
 
       </div>
@@ -285,6 +355,7 @@
         <p>8 pedaços <span>R$ 44,00</span></p>
         <p>12 pedaços <span>R$ 66,00</span></p>
         <img src="img/docedeleite-removebg-preview.png" alt="PizzaBombom">
+        <button id="Adicionar-Calabresa">adicionar ao carrinho</button>
 
 
       </div>
@@ -295,6 +366,7 @@
         <p>8 pedaços <span>R$ 44,00</span></p>
         <p>12 pedaços <span>R$ 66,00</span></p>
         <img src="img/bis-removebg-preview.png" alt="PizzaBombom">
+        <button id="Adicionar-Calabresa">adicionar ao carrinho</button>
 
 
       </div>
@@ -305,6 +377,7 @@
         <p>8 pedaços <span>R$ 44,00</span></p>
         <p>12 pedaços <span>R$ 66,00</span></p>
         <img src="img/docegoiaba-removebg-preview.png" alt="PizzaBombom">
+        <button id="Adicionar-Calabresa">adicionar ao carrinho</button>
 
 
       </div>
@@ -318,6 +391,7 @@
     <img src="img/pizza3.jpg" alt="pizza_sobre">
 
   </div>
+
 
   <footer class="footer">
     <h5>Desenvolvido por => André Luiz</h5>
