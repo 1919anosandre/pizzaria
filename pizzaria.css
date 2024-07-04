@@ -72,6 +72,10 @@ nav {
     height: 8vh;
 }
 
+.nav-list li img:hover {
+    cursor: pointer;
+}
+
 .mobile-menu {
     display: none;
     cursor: pointer;
@@ -255,7 +259,7 @@ h4 {
 
 }
 
-    
+
 
 
 
@@ -264,7 +268,8 @@ h4 {
         top: 8vh;
         width: 85vw;
         height: 92vh;
-        display: flex; /* Make it a flex container */
+        display: flex;
+        /* Make it a flex container */
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
@@ -272,14 +277,14 @@ h4 {
         position: absolute;
 
     }
-    
+
     .nav-list li {
         margin-left: 0;
         opacity: 0;
     }
 
- 
-    
+
+
     .mobile-menu {
         display: block;
 
@@ -332,7 +337,7 @@ h4 {
         font-size: 25px;
     }
 
-  
+
     .Caixa_Sobre {
         width: 100%;
     }
@@ -376,19 +381,21 @@ h4 {
         clear: both;
     }
 }
+
 .nav-list.active {
     transform: translateX(0);
     background: #23232e;
 }
 
 
-@media all and (min-width: 768px) and (max-width:  992px) {
-  nav-list{
- width: 100%;
-  }
-  nav-list li{
-    margin-left: 50px;
-  }
+@media all and (min-width: 768px) and (max-width: 992px) {
+    nav-list {
+        width: 100%;
+    }
+
+    nav-list li {
+        margin-left: 50px;
+    }
 
 
     .Caixa_Cardapio,
@@ -400,7 +407,7 @@ h4 {
 
     }
 
-    
+
 
 
 
@@ -484,7 +491,7 @@ section {
     background-color: rgba(109, 51, 45, 0.63);
     border: 01px solid rgb(41, 18, 16);
     border-radius: 4px;
-    height: 260px;
+    height: 290px;
     flex-direction: column;
     align-items: center;
     display: flex;
@@ -522,6 +529,22 @@ section {
     margin-top: 10px;
 }
 
+.Pizzas_Doces button,
+.Pizzas button {
+    background-color: #302525;
+    color: #ccc;
+    border-radius: 7px;
+    border: 1px solid rgb(41, 36, 36);
+    padding: 10px;
+}
+
+.Pizzas_Doces button:hover,
+.Pizzas button:hover {
+    cursor: pointer;
+    background-color: #181717;
+    color: #ffffff;
+
+}
 
 
 .Caixa_opções {
@@ -612,4 +635,93 @@ section {
 .footer span {
     margin-left: 10px;
     color: #eedfdf;
+}
+
+#Caixa-Pedido {
+    display: flex;
+    overflow-y: auto;
+    flex-direction: column;
+    z-index: 2;
+    width: 100%;
+    max-width: 450px;
+    height: 330px;
+    background-color: #ffffff;
+    margin: auto;
+    position: fixed;
+    /* Posiciona o contêiner no meio da tela */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    /* Inicialmente oculto */
+    border-radius: 7px;
+}
+
+#Itens-Carrinho {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.item {
+    justify-content: space-around;
+    display: flex;
+}
+
+#Itens-Carrinho h1 {
+    color: red;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+
+}
+
+#Itens-Carrinho img {
+    height: 100px;
+    margin-top: 5px;
+    width: 90px;
+}
+
+#Caixa-Pedido button {
+    background-color: #ffc506;
+    color: #181717;
+    border-radius: 7px;
+    padding: 10px;
+    margin-top: 15px;
+}
+
+#Caixa-Pedido button:hover {
+    background-color: #1d1d1d;
+    color: #ccc;
+    cursor: pointer;
+    transform: scale(1.00);
+    transition: 1s;
+
+}
+
+#Tamanho-Pizza option {
+    background-color: #e4e4e4;
+    color: #1d1d1d;
+    font-size: 1.1rem;
+    margin-top: 15px;
+
+
+}
+
+.itens-Preco-Quantidade {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.itens-Preco-Quantidade input {
+    margin-left: 15px;
+    color: #1d1d1d;
+    background-color: #d4c9c9;
+    border-radius: 7px;
 }
