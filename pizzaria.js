@@ -144,9 +144,30 @@ function Exibir_Carrinho() {
     const AdicionarCalabresa = document.querySelector('#Adicionar-Calabresa');
     const AdicionarFrango = document.querySelector('#Adicionar-Frango');
     const AdicionarBacon = document.querySelector('#Adicionar-Bacon');
+    const AdicionarQuatroQueijos = document.querySelector('#Adicionar-QuatroQueijos');
+    const AdicionarMarguerita = document.querySelector('#Adicionar-Marguerita');
+    const AdicionarPortuguesa = document.querySelector('#Adicionar-Portuguesa');
+    const AdicionarBaiana = document.querySelector('#Adicionar-Baiana');
+    const AdicionarLombo = document.querySelector('#Adicionar-Lombo');
+    const AdicionarFitness = document.querySelector('#Adicionar-Fitness');
+    const AdicionarAtum = document.querySelector('#Adicionar-Atum');
+    const AdicionarModa = document.querySelector('#Adicionar-Moda');
+    const AdicionarStrogonoff = document.querySelector('#Adicionar-Strogonoff');
+
     const Calabresa = document.querySelector('.Calabresa');
     const Frango = document.querySelector('.Frango');
     const Bacon = document.querySelector('.Bacon');
+    const QuatroQueijos = document.querySelector('.Quatro-Queijos');
+    const Marguerita = document.querySelector('.Marguerita');
+    const Atum = document.querySelector('.Atum');
+    const Baiana = document.querySelector('.Baiana');
+    const Moda = document.querySelector('.Moda');
+    const Lombo = document.querySelector('.Lombo');
+    const Portuguesa = document.querySelector('.Portuguesa');
+    const Fitness = document.querySelector('.Fitness');
+    const Strogonoff = document.querySelector('.Strogonoff');
+
+
     const Quantidade_Carrinho = document.querySelector('.Quantidade-Pedido-Carrinho');
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -154,6 +175,15 @@ function Exibir_Carrinho() {
         Bacon.style.display = 'none';
         Calabresa.style.display = 'none';
         Frango.style.display = 'none';
+        QuatroQueijos.style.display = 'none';
+        Marguerita.style.display = 'none';
+        Fitness.style.display = 'none';
+        Lombo.style.display = 'none';
+        Strogonoff.style.display = 'none';
+        Baiana.style.display = 'none';
+        Atum.style.display = 'none';
+        Moda.style.display = 'none';
+        Portuguesa.style.display = 'none';
 
         let quantidadeCarrinho = 0;
 
@@ -175,6 +205,65 @@ function Exibir_Carrinho() {
             Bacon.style.display = 'flex';
         });
 
+        AdicionarQuatroQueijos.addEventListener('click', () => {
+            quantidadeCarrinho++;
+            Quantidade_Carrinho.textContent = quantidadeCarrinho;
+            QuatroQueijos.style.display = 'flex';
+        });
+
+        AdicionarAtum.addEventListener('click', () => {
+            quantidadeCarrinho++;
+            Quantidade_Carrinho.textContent = quantidadeCarrinho;
+            Atum.style.display = 'flex';
+        });
+
+        AdicionarMarguerita.addEventListener('click', () => {
+            quantidadeCarrinho++;
+            Quantidade_Carrinho.textContent = quantidadeCarrinho;
+            Marguerita.style.display = 'flex';
+        });
+
+        AdicionarModa.addEventListener('click', () => {
+            quantidadeCarrinho++;
+            Quantidade_Carrinho.textContent = quantidadeCarrinho;
+            Moda.style.display = 'flex';
+        });
+
+        AdicionarLombo.addEventListener('click', () => {
+            quantidadeCarrinho++;
+            Quantidade_Carrinho.textContent = quantidadeCarrinho;
+            Lombo.style.display = 'flex';
+        });
+
+        AdicionarBaiana.addEventListener('click', () => {
+            quantidadeCarrinho++;
+            Quantidade_Carrinho.textContent = quantidadeCarrinho;
+            Baiana.style.display = 'flex';
+        });
+
+        AdicionarStrogonoff.addEventListener('click', () => {
+            quantidadeCarrinho++;
+            Quantidade_Carrinho.textContent = quantidadeCarrinho;
+            Strogonoff.style.display = 'flex';
+        });
+
+        AdicionarFitness.addEventListener('click', () => {
+            quantidadeCarrinho++;
+            Quantidade_Carrinho.textContent = quantidadeCarrinho;
+            Fitness.style.display = 'flex';
+        });
+
+        AdicionarPortuguesa.addEventListener('click', () => {
+            quantidadeCarrinho++;
+            Quantidade_Carrinho.textContent = quantidadeCarrinho;
+            Portuguesa.style.display = 'flex';
+        });
+
+
+
+
+
+
         Carrinho.addEventListener('click', () => {
             if (quantidadeCarrinho > 0) {
                 Caixa_Pedido.style.display = 'flex';
@@ -182,23 +271,27 @@ function Exibir_Carrinho() {
                 Caixa_Pedido.style.display = 'none';
             }
         });
+
+
+
+
     });
 }
 
 Exibir_Carrinho();
 
-const Tamanho_Pizza_MeuPedido = document.querySelector('.Tamanho_Pizza_MeuPedido');
-const Finalizar_Pedido = document.querySelector('#Finalizar-Pedido');
-
 document.addEventListener('DOMContentLoaded', () => {
     const itensCarrinho = document.querySelectorAll('#Itens-Carrinho .item');
+    const finalizarPedido = document.querySelector('#Finalizar-Pedido');
 
-    itensCarrinho.forEach(item => {
-        const select = item.querySelector('.Tamanho_Pizza');
-        const span = item.querySelector('.Preco');
-        const quantidadeInput = item.querySelector('.Quantidade');
+    const atualizarPrecoTotal = () => {
+        let precoTotalCarrinho = 0;
 
-        const atualizarPreco = () => {
+        itensCarrinho.forEach(item => {
+            const select = item.querySelector('.Tamanho_Pizza');
+            const quantidadeInput = item.querySelector('.Quantidade');
+            const span = item.querySelector('.Preco');
+
             let precoBase = 0;
             switch (select.value) {
                 case 'Pequena':
@@ -216,13 +309,21 @@ document.addEventListener('DOMContentLoaded', () => {
             const precoTotal = precoBase * quantidade;
 
             span.textContent = `R$ ${precoTotal.toFixed(2)}`;
-        };
+            precoTotalCarrinho += precoTotal;
+        });
 
-        // Atualizar o preço ao carregar a página
-        atualizarPreco();
+        finalizarPedido.textContent = `Finalizar Pedido R$ ${precoTotalCarrinho.toFixed(2)}`;
+    };
 
-        // Adicionar event listeners para atualizar o preço quando o usuário mudar o tamanho da pizza ou a quantidade
-        select.addEventListener('change', atualizarPreco);
-        quantidadeInput.addEventListener('input', atualizarPreco);
+    // Atualizar o preço ao carregar a página
+    atualizarPrecoTotal();
+
+    // Adicionar event listeners para atualizar o preço quando o usuário mudar o tamanho da pizza ou a quantidade
+    itensCarrinho.forEach(item => {
+        const select = item.querySelector('.Tamanho_Pizza');
+        const quantidadeInput = item.querySelector('.Quantidade');
+
+        select.addEventListener('change', atualizarPrecoTotal);
+        quantidadeInput.addEventListener('input', atualizarPrecoTotal);
     });
 });
