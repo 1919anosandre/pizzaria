@@ -225,26 +225,7 @@ nav {
     z-index: 1;
 }
 
-.Caixa_Inicial button {
-    width: 20%;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 07px;
-    border: 1px solid rgb(54, 54, 49);
-    padding: 15px;
-    margin-top: 15px;
-    letter-spacing: 1px;
-    color: rgb(241, 213, 213);
-    font-size: 20px;
-}
 
-.Caixa_Inicial button:hover {
-    cursor: pointer;
-    background-color: rgb(27, 27, 24);
-    color: rgb(241, 213, 213);
-    border: 1px solid rgb(57, 59, 50);
-
-
-}
 
 h3,
 h4 {
@@ -321,12 +302,6 @@ h4 {
 
     }
 
-    .Caixa_Inicial button {
-        text-align: center;
-        width: 70%;
-    }
-
-
     .Caixa_Cardapio,
     .Caixa_Pizza_Doce {
         width: 100%;
@@ -339,7 +314,9 @@ h4 {
     }
 
     #Caixa-Pedido {
-        flex-direction: column;
+        flex-direction: column-reverse;
+        align-items: center;
+        display: flex;
         width: 100%;
     }
 
@@ -348,11 +325,7 @@ h4 {
         display: flex;
     }
 
-    .item {
-        flex-direction: column;
-        display: flex;
 
-    }
 
     .Caixa_Sobre {
         width: 100%;
@@ -677,21 +650,24 @@ section {
 
 #Itens-Carrinho {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
 
 .item {
-    justify-content: space-around;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#Itens-Carrinho h1 {
+#Caixa-Pedido #Itens-Carrinho .item h1 {
     color: red;
     font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: 1px;
+    margin-top: 37px;
+    padding: 0 3%;
 
 
 }
@@ -727,6 +703,7 @@ section {
     border: 1px solid rgb(20, 20, 20);
     border-radius: 1px;
 
+
 }
 
 #Itens-Carrinho option:hover {
@@ -743,7 +720,7 @@ section {
 .itens-Preco-Quantidade span {
     color: red;
     font-size: 1.1rem;
-    margin-left: 15px
+    margin-left: 10px
 }
 
 .itens-Preco-Quantidade input {
