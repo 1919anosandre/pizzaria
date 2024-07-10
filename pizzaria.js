@@ -317,6 +317,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Atualizar o preço ao carregar a página
     atualizarPrecoTotal();
+  
 
     // Adicionar event listeners para atualizar o preço quando o usuário mudar o tamanho da pizza ou a quantidade
     itensCarrinho.forEach(item => {
@@ -326,4 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
         select.addEventListener('change', atualizarPrecoTotal);
         quantidadeInput.addEventListener('input', atualizarPrecoTotal);
     });
+
+
 });
+
