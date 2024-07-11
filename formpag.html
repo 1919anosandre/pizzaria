@@ -1,69 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>forma de pagamentos</title>
-    <link rel="stylesheet" href="formpag.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>forma de pagamentos</title>
+  <link rel="stylesheet" href="formpag.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wdth,wght@6..12,87.5,200..1000&display=swap"
+    rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.2/jquery.validate.min.js"></script>
+  <link rel="icon" href="img/pizza1-removebg-preview.png" type="image/x-icon">
+
 </head>
+
 <body>
 
-    <header>
-        <nav>
-            <ul>
-                <li class="logo_pizzaria"> <img src="img/pizza1-removebg-preview.png" alt="pizza1">PizzariaDev</li>
+  <header>
+    <nav>
+      <ul>
+        <li class="logo_pizzaria"> <img src="img/pizza1-removebg-preview.png" alt="pizza1">PizzariaDev</li>
 
-            </ul>
-        </nav>
-    </header>
+      </ul>
+    </nav>
+  </header>
 
 
 
-    <main> 
+  <main>
 
     <div class="Caixa_Formpag">
-        <h1>escolha sua forma de pagamento</h1>
-        <div class="Form-Pag-Img">
+      <h1>escolha sua forma de pagamento</h1>
+      <div class="Form-Pag-Img">
         <img class="FormCartao" src="img/formapagamentoCartao-removebg.png" alt="Cartão de crédito">
         <img class="FormPix" src="img/pixSimbolo-removebg-preview.png" alt="Pix">
         <img class="FormDinheiro" src="img/dinheirofisico-removebg-preview.png" alt="Dinheiro fisíco">
-        </div>
-        <div class="Caixa_FormCartao">
-          <h1>insira os dados do cartão</h1>
-          <form>
-
-          <input type="text" id="Numero_Cartao" placeholder="Digite o Numero do Cartão" required>
+      </div>
+      <div class="Caixa_FormCartao">
+        <h1>insira os dados do cartão</h1>
+        <form id="Form" method="post">
           <input type="text" id="Nome" placeholder="Digite o nome do Titular da conta" required>
+          <input type="text" id="Numero_Cartao" placeholder="Digite o Numero do Cartão" required maxlength="16">
           <input type="text" id="CPF" placeholder="Digite o seu Cpf" required>
-          <input type="text" id="Senha" placeholder="Digite a Senha do Cartão" required>
+          <input type="password" id="Senha" placeholder="Digite a Senha do Cartão" required>
           <input type="text" id="CVV" placeholder="Digite o CVV do Cartão" required>
-</form>
-          
+          <input type="text" id="validade-cartao" name="validade-cartao" placeholder="MM/AA" required maxlength="4">
+          <button type="submit">Enviar</button>
 
-        </div>
-
-        <div class="Caixa_FormPix">
-          <h1>insira sua chave pix</h1>
-          <input type="text" placeholder="Digite sua Chave Pix">
+        </form>
 
 
-        </div>
+      </div>
 
-        <div class="Caixa_FormDinheiro">
-          <input type="text" placeholder="Digite o Valor">
-
-
-
-        </div>
-
-   
-    </main>
-    <footer>
-        <p>&copy; 2024 Pizzaria AiQueFome</p>
-      </footer>
-    
+      <div class="Caixa_FormPix">
+        <h1>insira sua chave pix</h1>
+        <input type="text" placeholder="Digite sua Chave Pix">
 
 
-   <script src="formpag.js"></script> 
+      </div>
+
+      <div class="Caixa_FormDinheiro">
+        <input type="text" placeholder="Digite o Valor">
+
+
+
+
+      </div>
+
+
+  </main>
+  <footer>
+    <p>&copy; 2024 Pizzaria AiQueFome</p>
+  </footer>
+
+
+
+  <script src="formpag.js"></script>
+  <script src="path/to/your/validation-script.js"></script>
+
 </body>
+
 </html>
