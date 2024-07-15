@@ -148,7 +148,7 @@ main {
 
 
 .Caixa_FormPix {
-  display: none;
+  display: flex;
 }
 
 .Caixa_FormDinheiro {
@@ -162,4 +162,31 @@ footer {
   color: white;
   font-weight: 800;
   margin-top: 10px;
+}
+
+.Caixa_FormCartao, .Caixa_FormPix, .Caixa_FormDinheiro {
+  opacity: 0;
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.Caixa_FormCartao.visible, .Caixa_FormPix.visible, .Caixa_FormDinheiro.visible {
+  display: block;
+  opacity: 1;
+}
+
+.FormCartao, .FormPix, .FormDinheiro {
+  cursor: pointer;
+}
+
+.FormCartao, .FormPix, .FormDinheiro {
+  border: none;
+  transition: border 0.5s ease-in-out;
+}
+
+@media all and (max-width : 767px){
+.Caixa_Formpag{
+width: 90%;
+}
+
 }
