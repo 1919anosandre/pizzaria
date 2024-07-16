@@ -1,204 +1,161 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  border: none;
-  font-family: 'Nunito Sans', sans-serif;
-  text-transform: capitalize;
-}
+const FormCartao = document.querySelector('.FormCartao');
+const FormPix = document.querySelector('.FormPix');
+const FormDinheiro = document.querySelector('.FormDinheiro');
 
-body {
-  background-color: rgba(14, 13, 13, 0.952);
-  height: 100%;
-}
+function Evento_Mostrar_Ocultar() {
+    const Caixa_FormCartao = document.querySelector('.Caixa_FormCartao');
+    const Caixa_FormPix = document.querySelector('.Caixa_FormPix');
+    const Caixa_FormDinheiro = document.querySelector('.Caixa_FormDinheiro');
 
-header nav ul li {
-  display: flex;
-  top: 0;
-  align-items: center;
-  justify-content: center;
-  background: #23232e;
-  width: 100%;
-}
+    document.addEventListener('DOMContentLoaded', () => {
+        Caixa_FormCartao.classList.add('visible');
+        FormCartao.style.border = '2px solid yellow';
 
-@keyframes floatUpDown {
-  0% {
-    transform: translateY(0);
-  }
+        FormCartao.addEventListener('click', () => {
+            Caixa_FormCartao.classList.add('visible');
+            Caixa_FormCartao.style.display = 'block';
+            setTimeout(() => {
+                Caixa_FormCartao.style.opacity = '1';
+            }, 0);
 
-  100% {
-    transform: translateY(-20px);
-  }
-}
+            Caixa_FormPix.style.opacity = '0';
+            Caixa_FormDinheiro.style.opacity = '0';
 
-@keyframes mudarCor {
-  0% {
-    color: red;
-  }
+            setTimeout(() => {
+                Caixa_FormPix.style.display = 'none';
+                Caixa_FormDinheiro.style.display = 'none';
+            }, 500);
 
-  50% {
-    color: rgb(255, 187, 0);
-  }
+            FormCartao.style.border = '2px solid yellow';
+            FormPix.style.border = 'none';
+            FormDinheiro.style.border = 'none';
+        });
 
-  100% {
-    color: orangered;
-  }
-}
+        FormPix.addEventListener('click', () => {
+            Caixa_FormPix.classList.add('visible');
+            Caixa_FormPix.style.display = 'block';
+            setTimeout(() => {
+                Caixa_FormPix.style.opacity = '1';
+            }, 0);
 
-.logo_pizzaria {
-  font-size: 20px;
-  letter-spacing: 2px;
-  display: flex;
-  align-items: center;
-  margin-right: 100px;
-  font-weight: 600;
-  font-style: italic;
-  animation: mudarCor 3s infinite;
-}
+            Caixa_FormCartao.style.opacity = '0';
+            Caixa_FormDinheiro.style.opacity = '0';
 
-.logo_pizzaria img {
-  animation: floatUpDown 3s ease-in-out infinite alternate;
-  margin-right: 10px;
-  width: 55px;
+            setTimeout(() => {
+                Caixa_FormCartao.style.display = 'none';
+                Caixa_FormDinheiro.style.display = 'none';
+            }, 500);
 
-}
+            FormCartao.style.border = 'none';
+            FormPix.style.border = '2px solid yellow';
+            FormDinheiro.style.border = 'none';
+        });
 
-main {
-  height: 100%;
-  width: 100%;
-}
+        FormDinheiro.addEventListener('click', () => {
+            Caixa_FormDinheiro.classList.add('visible');
+            Caixa_FormDinheiro.style.display = 'block';
+            setTimeout(() => {
+                Caixa_FormDinheiro.style.opacity = '1';
+            }, 0);
 
-.Caixa_Formpag {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin: 100px auto;
-  background-color: rgb(49, 53, 53);
-  border-radius: 10px;
-  border: 1px solid rgb(78, 74, 74);
+            Caixa_FormCartao.style.opacity = '0';
+            Caixa_FormPix.style.opacity = '0';
 
-  width: 100%;
-  max-width: 500px;
-  height: 590px;
-}
+            setTimeout(() => {
+                Caixa_FormCartao.style.display = 'none';
+                Caixa_FormPix.style.display = 'none';
+            }, 500);
 
-.Caixa_FormCartao {
-  display: flex;
-  flex-direction: column;
-}
+            FormCartao.style.border = 'none';
+            FormPix.style.border = 'none';
+            FormDinheiro.style.border = '2px solid yellow';
+        });
+    });
+};
 
-.Caixa_FormCartao input {
-  background-color: #ffffff;
-  color: rgb(39, 34, 34);
-  border-radius: 6px;
-  border: 1px solid gray;
-  width: 70%;
-  padding: 10px;
-  margin: 0 12px 10px;
-  margin-top: 10px;
-}
+Evento_Mostrar_Ocultar();
+// Função para validar o número do cartão de crédito usando o algoritmo de Luhn
+function validarNumeroCartao(cartao) {
+    const cartaoSemEspacos = cartao.replace(/\D/g, '');
+    let soma = 0;
+    let deveDobrar = false;
 
-.Caixa_Formpag button {
-  width: 50%;
-  background-color: rgba(17, 14, 14, 0.925);
-  color: #ffffff;
-  padding: 7px;
-  border-radius: 7px;
-  margin: 0 100px;
-  margin-top: 10px;
-  font-size: 14px;
-  letter-spacing: 2px;
-}
+    for (let i = cartaoSemEspacos.length - 1; i >= 0; i--) {
+        let digito = parseInt(cartaoSemEspacos.charAt(i));
 
-.Caixa_Formpag button:hover {
-  cursor: pointer;
-  background-color: #23232e;
+        if (deveDobrar) {
+            digito *= 2;
+            if (digito > 9) {
+                digito -= 9;
+            }
+        }
 
-  transform: scale(1.01);
-  transition: 1s;
-}
+        soma += digito;
+        deveDobrar = !deveDobrar;
+    }
 
-.Caixa_Formpag h1 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: rgb(255, 255, 255);
-  margin: 0 12px;
-
+    return soma % 10 === 0;
 }
 
 
-.Form-Pag-Img {
-  display: flex;
-  justify-content: space-around;
-  margin-right: 150px;
+function Validar_Senha(Senha) {
+    const Numeros_Senha = /[0-9]/
+    if (Senha === 4 && Senha === Numeros_Senha) {
+        return true
+    }
 }
 
-.Form-Pag-Img img {
-  width: 110px;
-  height: 90px;
-  padding: 0 7%;
+function Validar_CVV(CVV) {
+    let Numeros_CVV = /[0-9]/
+
+    if (CVV === 4 && CVV === Numeros_CVV) {
+        return true
+    }
 }
 
-.Form-Pag-Img img:hover {
-  cursor: pointer;
-  transform: scale(1.05);
-  transition: 1s;
+// Função para validar o formulário
+function Validar_Form() {
+    const Nome = document.querySelector('#Nome').value;
+    const Numero_Cartao = document.querySelector('#Numero_Cartao').value;
+    const CPF = document.querySelector('#CPF').value;
+    const CVV = document.querySelector('#CVV').value;
+    const Senha = document.querySelector('#Senha').value;
+    const Input = document.getElementsByTagName('input')
+
+    // Verifica se todos os campos estão preenchidos
+    if (Nome === '' || Numero_Cartao === '' || CPF === '' || CVV === '' || Senha === '') {
+        alert('Por favor preencha todos os campos');
+        return false;
+    }
+
+    // Verifica se o número do cartão de crédito é válido
+    if (!validarNumeroCartao(Numero_Cartao)) {
+        alert('Por favor insira um número de cartão válido');
+        return false;
+    }
+    if (!Validar_Senha(Senha)) {
+        alert('Por favor insira uma senha valida')
+        return false
+        Input.style.border = '2px solid red'
+
+    }
+    if (!Validar_CVV(CVV)) {
+        alert('Por favor insira um CVV valido')
+        return false
+    }
+
+    // Se todos os campos estiverem preenchidos corretamente, exibe mensagem de sucesso
+    alert('Formulário enviado com sucesso!');
+    return true;
 }
 
-
-.Caixa_FormPix {
-  display: flex;
-}
-
-.Caixa_FormDinheiro {
-  display: none;
-}
-
-footer {
-  text-align: center;
-  font-size: 20px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-  color: white;
-  font-weight: 800;
-  margin-top: 10px;
-}
-
-.Caixa_FormCartao, .Caixa_FormPix, .Caixa_FormDinheiro {
-  opacity: 0;
-  display: none;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.Caixa_FormCartao.visible, .Caixa_FormPix.visible, .Caixa_FormDinheiro.visible {
-  display: block;
-  opacity: 1;
-}
-
-.FormCartao, .FormPix, .FormDinheiro {
-  cursor: pointer;
-}
-
-.FormCartao, .FormPix, .FormDinheiro {
-  border: none;
-  transition: border 0.5s ease-in-out;
-}
-
-@media all and (max-width : 767px){
-.Caixa_Formpag{
-width: 90%;
-}
-.Caixa_Formpag h1{
-font-size: 1.1rem;
-}
-
-.Form-Pag-Img {
-  margin: 0 3px;
-}
-.Form-Pag-Img img{
-  width: 90px;
-  height: auto;
-}
-
-}
+// Executa o código quando o DOM estiver completamente carregado
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelector('#Form').addEventListener('submit', function (event) {
+        event.preventDefault(); // Evita o envio do formulário antes da validação
+        if (Validar_Form()) {
+            // Se o formulário for válido, pode prosseguir com o envio
+            this.submit();
+        }
+    });
+});
