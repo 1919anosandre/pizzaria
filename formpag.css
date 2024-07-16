@@ -74,9 +74,9 @@ main {
   flex-direction: column;
   align-items: center;
   margin: 100px auto;
-  background-color: rgb(241, 255, 255);
+  background-color: rgb(49, 53, 53);
   border-radius: 10px;
-  border: 1px solid rgb(163, 149, 149);
+  border: 1px solid rgb(78, 74, 74);
 
   width: 100%;
   max-width: 500px;
@@ -101,7 +101,7 @@ main {
 
 .Caixa_Formpag button {
   width: 50%;
-  background-color: #23232e;
+  background-color: rgba(17, 14, 14, 0.925);
   color: #ffffff;
   padding: 7px;
   border-radius: 7px;
@@ -113,7 +113,8 @@ main {
 
 .Caixa_Formpag button:hover {
   cursor: pointer;
-  background-color: rgba(17, 14, 14, 0.925);
+  background-color: #23232e;
+
   transform: scale(1.01);
   transition: 1s;
 }
@@ -122,7 +123,7 @@ main {
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 2px;
-  color: rgb(19, 18, 18);
+  color: rgb(255, 255, 255);
   margin: 0 12px;
 
 }
@@ -187,6 +188,17 @@ footer {
 @media all and (max-width : 767px){
 .Caixa_Formpag{
 width: 90%;
+}
+.Caixa_Formpag h1{
+font-size: 1.1rem;
+}
+
+.Form-Pag-Img {
+  margin: 0 3px;
+}
+.Form-Pag-Img img{
+  width: 90px;
+  height: auto;
 }
 
 }
