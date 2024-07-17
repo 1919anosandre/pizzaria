@@ -153,6 +153,19 @@ function Exibir_Carrinho() {
     const AdicionarAtum = document.querySelector('#Adicionar-Atum');
     const AdicionarModa = document.querySelector('#Adicionar-Moda');
     const AdicionarStrogonoff = document.querySelector('#Adicionar-Strogonoff');
+    const AdicionarRomeuJulieta = document.querySelector('#Adicionar-Romeu-Julieta');
+    const AdicionarBananaCanela = document.querySelector('#Adicionar-Banana-Canela');
+    const AdicionarMorango = document.querySelector('#Adicionar-Morango');
+    const AdicionarBis = document.querySelector('#Adicionar-Bis');
+    const AdicionarDisquete = document.querySelector('#Adicionar-Disquete');
+    const AdicionarChocolateBranco = document.querySelector('#Adicionar-Chocolate-Branco');
+    const AdicionarDoceLeite = document.querySelector('#Adicionar-Doce-Leite');
+    const AdicionarPrestigio = document.querySelector('#Adicionar-Prestigio');
+    const AdicionarSorvete = document.querySelector('#Adicionar-Sorvete');
+    const AdicionarBombom = document.querySelector('#Adicionar-Bombom');
+    const AdicionarDoisAmores = document.querySelector('#Adicionar-Dois-Amores');
+    const AdicionarGoiabada = document.querySelector('#Adicionar-Goiaba');
+
 
     const Calabresa = document.querySelector('.Calabresa');
     const Frango = document.querySelector('.Frango');
@@ -166,6 +179,19 @@ function Exibir_Carrinho() {
     const Portuguesa = document.querySelector('.Portuguesa');
     const Fitness = document.querySelector('.Fitness');
     const Strogonoff = document.querySelector('.Strogonoff');
+    const Goiabada = document.querySelector('.Goiabada');
+    const DoisAmores = document.querySelector('.Dois-Amores');
+    const Bombom = document.querySelector('.Bombom');
+    const Bis = document.querySelector('.Bis');
+    const BananaCanela = document.querySelector('.Banana-Canela');
+    const DoceLeite = document.querySelector('.Doce-Leite');
+    const Morango = document.querySelector('.Morango');
+    const Sorvete = document.querySelector('.Sorvete');
+    const ChocolateBranco = document.querySelector('.Chocolate-Branco');
+    const Disquete = document.querySelector('.Disquete');
+    const Prestigio = document.querySelector('.Prestigio');
+    const RomeuJulieta = document.querySelector('.Romeu-Julieta');
+
 
 
     const Quantidade_Carrinho = document.querySelector('.Quantidade-Pedido-Carrinho');
@@ -184,6 +210,19 @@ function Exibir_Carrinho() {
         Atum.style.display = 'none';
         Moda.style.display = 'none';
         Portuguesa.style.display = 'none';
+        RomeuJulieta.style.display = 'none'
+        Disquete.style.display = 'none'
+        DoceLeite.style.display = 'none'
+        Goiabada.style.display = 'none'
+        Morango.style.display = 'none'
+        DoisAmores.style.display = 'none'
+        ChocolateBranco.style.display = 'none'
+        Bis.style.display = 'none'
+        Bombom.style.display = 'none'
+        Sorvete.style.display = 'none'
+        BananaCanela.style.display = 'none'
+        Prestigio.style.display = 'none'
+
 
         let quantidadeCarrinho = 0;
 
@@ -259,6 +298,78 @@ function Exibir_Carrinho() {
             Portuguesa.style.display = 'flex';
         });
 
+        AdicionarPrestigio.addEventListener('click', () => {
+            quantidadeCarrinho++;
+            Quantidade_Carrinho.textContent = quantidadeCarrinho;
+            Prestigio.style.display = 'flex';
+        });
+
+        AdicionarBananaCanela.addEventListener('click', () => {
+            quantidadeCarrinho++;
+            Quantidade_Carrinho.textContent = quantidadeCarrinho;
+            BananaCanela.style.display = 'flex';
+        });
+
+        AdicionarBombom.addEventListener('click', () => {
+            quantidadeCarrinho++;
+            Quantidade_Carrinho.textContent = quantidadeCarrinho;
+            Bombom.style.display = 'flex';
+        });
+
+        AdicionarChocolateBranco.addEventListener('click', () => {
+            quantidadeCarrinho++;
+            Quantidade_Carrinho.textContent = quantidadeCarrinho;
+            ChocolateBranco.style.display = 'flex';
+        });
+
+        AdicionarDisquete.addEventListener('click', () => {
+            quantidadeCarrinho++;
+            Quantidade_Carrinho.textContent = quantidadeCarrinho;
+            Disquete.style.display = 'flex';
+        });
+
+        AdicionarDoceLeite.addEventListener('click', () => {
+            quantidadeCarrinho++;
+            Quantidade_Carrinho.textContent = quantidadeCarrinho;
+            DoceLeite.style.display = 'flex';
+        });
+
+        AdicionarDoisAmores.addEventListener('click', () => {
+            quantidadeCarrinho++;
+            Quantidade_Carrinho.textContent = quantidadeCarrinho;
+            DoisAmores.style.display = 'flex';
+        });
+
+        AdicionarBis.addEventListener('click', () => {
+            quantidadeCarrinho++;
+            Quantidade_Carrinho.textContent = quantidadeCarrinho;
+            Bis.style.display = 'flex';
+        });
+
+        AdicionarMorango.addEventListener('click', () => {
+            quantidadeCarrinho++;
+            Quantidade_Carrinho.textContent = quantidadeCarrinho;
+            Morango.style.display = 'flex';
+        });
+
+        AdicionarSorvete.addEventListener('click', () => {
+            quantidadeCarrinho++;
+            Quantidade_Carrinho.textContent = quantidadeCarrinho;
+            Sorvete.style.display = 'flex';
+        });
+
+        AdicionarGoiabada.addEventListener('click', () => {
+            quantidadeCarrinho++;
+            Quantidade_Carrinho.textContent = quantidadeCarrinho;
+            Goiabada.style.display = 'flex';
+        });
+
+        AdicionarRomeuJulieta.addEventListener('click', () => {
+            quantidadeCarrinho++;
+            Quantidade_Carrinho.textContent = quantidadeCarrinho;
+            RomeuJulieta.style.display = 'flex';
+        });
+
 
 
 
@@ -317,7 +428,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Atualizar o preço ao carregar a página
     atualizarPrecoTotal();
-  
+
 
     // Adicionar event listeners para atualizar o preço quando o usuário mudar o tamanho da pizza ou a quantidade
     itensCarrinho.forEach(item => {
