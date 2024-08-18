@@ -477,7 +477,7 @@ section {
 
 .Pizzas,
 .Pizzas_Doces {
-    background-color: rgba(109, 51, 45, 0.63);
+    background-color: #802F160C;
     border: 01px solid rgb(41, 18, 16);
     border-radius: 4px;
     height: 290px;
@@ -493,7 +493,7 @@ section {
 
 .Pizzas_Doces h1,
 .Pizzas h1 {
-    color: rgb(255, 255, 255);
+    color: #F9CF58;
     font-size: 18px;
     letter-spacing: 1px;
     font-style: italic;
@@ -520,7 +520,7 @@ section {
 
 .Pizzas_Doces button,
 .Pizzas button {
-    background-color: #302525;
+    background-color: #ddb352;
     color: #ccc;
     border-radius: 7px;
     border: 1px solid rgb(41, 36, 36);
