@@ -467,7 +467,7 @@ section {
 
 .Caixa_Cardapio,
 .Caixa_Pizza_Doce {
-    background-color: rgb(59, 57, 57);
+    background-color: #222121;
     display: flex;
     justify-content: space-around;
     height: 100%;
