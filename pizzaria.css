@@ -477,9 +477,8 @@ section {
 
 .Pizzas,
 .Pizzas_Doces {
-    background-color: #802F160C;
-    border: 01px solid rgb(41, 18, 16);
-    border-radius: 4px;
+    background-color: #271009;
+    border-radius: 10px;
     height: 290px;
     flex-direction: column;
     align-items: center;
@@ -521,17 +520,16 @@ section {
 .Pizzas_Doces button,
 .Pizzas button {
     background-color: #ddb352;
-    color: #ccc;
+    color: #202020;
     border-radius: 7px;
-    border: 1px solid rgb(41, 36, 36);
     padding: 10px;
 }
 
 .Pizzas_Doces button:hover,
 .Pizzas button:hover {
     cursor: pointer;
-    background-color: #181717;
-    color: #ffffff;
+    background-color: #202020;
+    color:  #ddb352;
 
 }
 
