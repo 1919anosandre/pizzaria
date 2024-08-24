@@ -114,7 +114,7 @@ nav {
 
 .Inicio,
 .Cardapio,
-.Sobre {
+.Sobre-li {
     padding: 20px;
     font-size: 20px;
     letter-spacing: 2px;
@@ -173,7 +173,7 @@ nav {
 
 .Inicio:hover,
 .Cardapio:hover,
-.Sobre:hover {
+.Sobre-li:hover {
     border-bottom: 4px solid #ffc506;
     color: #ffc506;
 }
@@ -230,13 +230,11 @@ nav {
 h3,
 h4 {
     font-size: 35px;
-    color: white;
-    z-index: 1;
-    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    color: rgb(71, 36, 36);
     font-weight: 600;
-    background-color: #242024;
     text-align: center;
     letter-spacing: 4px;
+    background-color: #fcd8a8;
 
 }
 
@@ -329,6 +327,8 @@ h4 {
 
     .Caixa_Sobre {
         width: 100%;
+        flex-direction: column;
+        justify-content: center;
     }
 
     .Caixa_Sobre h1 {
@@ -467,7 +467,7 @@ section {
 
 .Caixa_Cardapio,
 .Caixa_Pizza_Doce {
-    background-color: #222121;
+    background-color: #fcd8a8;
     display: flex;
     justify-content: space-around;
     height: 100%;
@@ -477,7 +477,7 @@ section {
 
 .Pizzas,
 .Pizzas_Doces {
-    background-color: #271009;
+    background-color: #fd7b44;
     border-radius: 10px;
     height: 290px;
     flex-direction: column;
@@ -487,12 +487,13 @@ section {
     margin-right: 5px;
     min-width: 200px;
     flex: 0 0 auto;
+    border: 1px solid rgb(255, 200, 127);
 
 }
 
 .Pizzas_Doces h1,
 .Pizzas h1 {
-    color: #F9CF58;
+    color: #ffffff;
     font-size: 18px;
     letter-spacing: 1px;
     font-style: italic;
@@ -503,7 +504,7 @@ section {
 
 .Pizzas_Doces p,
 .Pizzas p {
-    color: #f1f1f1;
+    color: #ffffff;
     font-size: 16px;
     letter-spacing: 1px;
     margin-top: 10px;
@@ -562,17 +563,20 @@ section {
 
 .Caixa_Sobre {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     background-color: #302525;
     align-items: center;
-    height: 100%;
-    flex-direction: column;
     scroll-snap-type: y mandatory;
 
 
 }
+.Sobre{
+display: flex;
+flex-direction: column;
+padding: 10px 4%;
+}
 
-.Caixa_Sobre h1 {
+.Sobre h1 {
     font-size: 40px;
     text-align: center;
     font-weight: 600;
@@ -583,7 +587,7 @@ section {
 
 }
 
-.Caixa_Sobre p {
+.Sobre p {
     letter-spacing: 2px;
     color: white;
     font-size: 18px;
@@ -593,9 +597,12 @@ section {
 
 .Caixa_Sobre img {
     width: 100%;
-    margin-top: 15px;
-    max-width: 480px;
+    max-width: 400px;
     border-radius: 10px;
+    margin-right: 10px;
+    height: 400px;
+    padding-block-end: 5px;
+
 
 }
 
