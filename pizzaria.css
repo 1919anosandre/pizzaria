@@ -51,7 +51,7 @@ nav {
     justify-content: space-around;
     align-items: center;
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
-    background: red;
+    background: #ff0000;
     height: 12vh;
 }
 
@@ -66,10 +66,33 @@ nav {
     letter-spacing: 3px;
     margin-left: 25px;
     color: white;
+    font-size: 20px;
 }
 
 .nav-list li img {
     height: 8vh;
+}
+
+.login svg,
+.Inicio svg,
+.Cardapio img,
+.Sobre-li img {
+    height: 30px;
+    width: 35px;
+    margin: 0 5px;
+    color: rgb(255, 238, 0);
+
+}
+
+.login,
+.Inicio,
+.Cardapio,
+.Sobre-li,
+#Carrinho,
+.git-hub {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-list li img:hover {
@@ -133,7 +156,7 @@ nav {
 
 @keyframes mudarCor {
     0% {
-        color: red;
+        color: rgb(224, 247, 93);
     }
 
     50% {
@@ -141,7 +164,7 @@ nav {
     }
 
     100% {
-        color: orangered;
+        color: rgb(255, 217, 0);
     }
 }
 
@@ -173,9 +196,11 @@ nav {
 
 .Inicio:hover,
 .Cardapio:hover,
-.Sobre-li:hover {
+.Sobre-li:hover,
+.login:hover {
     border-bottom: 4px solid #ffc506;
     color: #ffc506;
+    cursor: pointer;
 }
 
 .Caixa_Inicial {
@@ -234,7 +259,7 @@ h4 {
     font-weight: 600;
     text-align: center;
     letter-spacing: 4px;
-    background-color: #fcd8a8;
+    background-color: #f0c164;
 
 }
 
@@ -255,29 +280,33 @@ h4 {
         justify-content: space-around;
         z-index: 2;
         position: absolute;
-        
 
     }
 
     .nav-list li {
         margin-left: 0;
         opacity: 0;
+        font-size: 1.4rem;
     }
-
-
 
     .mobile-menu {
         display: block;
 
     }
 
-
-
     .logo_pizzaria img {
         animation: floatUpDown 3s ease-in-out infinite alternate;
 
     }
 
+    .login svg,
+    .Inicio svg,
+    .Cardapio img,
+    .Sobre-li img {
+        height: 100px;
+        width: 100px;
+
+    }
 
 
 
@@ -468,7 +497,7 @@ section {
 
 .Caixa_Cardapio,
 .Caixa_Pizza_Doce {
-    background-color: #fcd8a8;
+    background-color: #f0c164;
     display: flex;
     justify-content: space-around;
     height: 100%;
@@ -478,7 +507,7 @@ section {
 
 .Pizzas,
 .Pizzas_Doces {
-    background-color: #fd7b44;
+    background-color: #f52929;
     border-radius: 10px;
     height: 290px;
     flex-direction: column;
@@ -488,7 +517,6 @@ section {
     margin-right: 5px;
     min-width: 200px;
     flex: 0 0 auto;
-    border: 1px solid rgb(255, 200, 127);
 
 }
 
@@ -521,8 +549,8 @@ section {
 
 .Pizzas_Doces button,
 .Pizzas button {
-    background-color: #ddb352;
-    color: #202020;
+    background-color: #78ff56;
+    color: #000000;
     border-radius: 7px;
     padding: 10px;
 }
@@ -530,8 +558,8 @@ section {
 .Pizzas_Doces button:hover,
 .Pizzas button:hover {
     cursor: pointer;
-    background-color: #202020;
-    color:  #ddb352;
+    background-color: #2ce008;
+    color: #000000;
 
 }
 
@@ -571,10 +599,11 @@ section {
 
 
 }
-.Sobre{
-display: flex;
-flex-direction: column;
-padding: 10px 4%;
+
+.Sobre {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 4%;
 }
 
 .Sobre h1 {
