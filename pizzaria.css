@@ -53,7 +53,6 @@ nav {
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     background: #ff0000;
     height: 12vh;
-
 }
 
 
@@ -254,7 +253,7 @@ nav {
 
 
 h3,
-h4 {
+h4{
     font-size: 35px;
     color: rgb(71, 36, 36);
     font-weight: 600;
@@ -263,7 +262,21 @@ h4 {
     background-color: #f0c164;
 
 }
-
+.aperitivos-titulo{
+background-color: #fcc14c;
+font-size: 50px;
+text-align: center;
+letter-spacing: 4px;
+}
+h5 span{
+display: inline;
+}
+.primeira-cor{
+color: #801010;
+}
+.segunda-cor{
+color: green;
+}
 .hidden {
     opacity: 0;
     filter: blur(15px);
@@ -327,7 +340,6 @@ h4 {
     .Caixa_Inicial {
         padding: 18px 8%;
         width: 100%;
-
 
     }
 
@@ -412,6 +424,16 @@ h4 {
 
     .clear {
         clear: both;
+    }
+
+    .Container-Aperitivos{
+    flex-direction: column;
+    }
+    .Alinhamento-Aperitivos{
+    flex-direction: column;
+    }
+    .Alinhamento-Aperitivos img{
+    width: 70%;
     }
 }
 
@@ -823,3 +845,80 @@ section {
     background-color: #d4c9c9;
     border-radius: 7px;
 }
+
+
+.Container-Aperitivos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100vh;
+    background-color: #fcc14c;
+
+    }
+    .Alinhamento-Aperitivos{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    }
+    .Alinhamento-Aperitivos img{
+    height: 300px;
+    max-width: 300px;
+    width: 100%;
+    }
+    .Card-Aperitivos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(251, 255, 5);
+    max-width: 240px;
+    width: 100%;
+    height: 240px;
+    margin: 0 5px;
+    border-radius: 10px;
+    margin-top: 10px;
+    }
+    
+    .Card-Aperitivos h1{
+    font-size: 22px;
+    color: rgb(38, 146, 16);
+    font-weight: 700;
+    letter-spacing: 1px;
+    }
+    
+    .Card-Aperitivos p{
+    font-size: 18px;
+    color: white;
+    font-weight: 600;
+    }
+    
+    .Card-Aperitivos img{
+    height: 120px;
+    width: 120px;
+    margin-top: 10px;
+    }
+    
+    .Card-Aperitivos span{
+    color: red;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 10px;
+    }
+    
+    .Card-Aperitivos button{
+    background-color: #0f0;
+    color: #0f0f0f;
+    width: 60%;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    }
+
+    .Card-Aperitivos button:hover{
+    background-color: #6dff50;
+    cursor: pointer;
+    }
+
+    
