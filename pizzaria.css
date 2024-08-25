@@ -429,6 +429,7 @@ color: green;
     .Container-Aperitivos{
     flex-direction: column;
     justify-content: center;
+    overflow-y: auto;
     }
     .Alinhamento-Aperitivos{
     flex-direction: column;
