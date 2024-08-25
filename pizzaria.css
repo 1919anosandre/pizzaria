@@ -53,6 +53,7 @@ nav {
     font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
     background: #ff0000;
     height: 12vh;
+
 }
 
 
@@ -263,6 +264,19 @@ h4 {
 
 }
 
+.hidden {
+    opacity: 0;
+    filter: blur(15px);
+    transition: all 2s;
+    transform: translateX(-100%);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: all 2s;
+}
 
 
 
@@ -303,8 +317,8 @@ h4 {
     .Inicio svg,
     .Cardapio img,
     .Sobre-li img {
-        height: 100px;
-        width: 100px;
+        height: 70px;
+        width: 70px;
 
     }
 
@@ -515,10 +529,55 @@ section {
     display: flex;
     margin-top: 18px;
     margin-right: 5px;
-    min-width: 200px;
-    flex: 0 0 auto;
+    max-width: 200px;
+    width: 100%;
 
 }
+
+.Pizzas :nth-child(2) {
+    transition-delay: 400ms;
+}
+
+.Pizzas :nth-child(3) {
+    transition-delay: 500ms;
+}
+
+.Pizzas :nth-child(4) {
+    transition-delay: 600ms;
+}
+
+.Pizzas :nth-child(5) {
+    transition-delay: 700ms;
+}
+
+.Pizzas :nth-child(6) {
+    transition-delay: 800ms;
+}
+
+.Pizzas :nth-child(7) {
+    transition-delay: 900ms;
+}
+
+.Pizzas :nth-child(8) {
+    transition-delay: 1000ms;
+}
+
+.Pizzas :nth-child(9) {
+    transition-delay: 1100ms;
+}
+
+.Pizzas :nth-child(10) {
+    transition-delay: 1200ms;
+}
+
+.Pizzas :nth-child(11) {
+    transition-delay: 1300ms;
+}
+
+.Pizzas :nth-child(12) {
+    transition-delay: 1400ms;
+}
+
 
 .Pizzas_Doces h1,
 .Pizzas h1 {
