@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const Inicio = document.querySelector(".Inicio");
     const Cardapio = document.querySelector(".Cardapio");
-    const Sobre = document.querySelector(".Sobre");
+    const Sobre = document.querySelector(".Sobre-li");
     const Caixa_Inicial = document.querySelector(".Caixa_Inicial");
     const Caixa_Cardapio = document.querySelector(".Caixa_Cardapio");
     const Caixa_Sobre = document.querySelector(".Caixa_Sobre");
@@ -442,3 +442,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+const observar = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show')
+        } else {
+            entry.target.classList.remove('show')
+        }
+    })
+})
+const elements = document.querySelectorAll('.hidden')
+elements.forEach((elements) => observar.observe(elements))
