@@ -428,12 +428,18 @@ color: green;
 
     .Container-Aperitivos{
     flex-direction: column;
+    justify-content: center;
     }
     .Alinhamento-Aperitivos{
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     }
     .Alinhamento-Aperitivos img{
     width: 70%;
+    }
+    .Card-Aperitivos{
+    width: 50%;
     }
 }
 
@@ -921,4 +927,5 @@ section {
     cursor: pointer;
     }
 
+    
     
