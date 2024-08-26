@@ -438,6 +438,9 @@ color: green;
     }
     .Alinhamento-Aperitivos img{
     width: 70%;
+    padding-block-end: 4px;
+    margin-top: 8px;
+   
     }
     .Card-Aperitivos{
     width: 50%;
