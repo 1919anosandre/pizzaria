@@ -263,7 +263,7 @@ h4{
 
 }
 .aperitivos-titulo{
-background-color: #fcc14c;
+background-color: #f8d58f;
 font-size: 50px;
 text-align: center;
 letter-spacing: 4px;
@@ -368,7 +368,6 @@ color: green;
     }
 
     #Caixa-Pedido {
-        flex-direction: column-reverse;
         align-items: center;
         display: flex;
         width: 100%;
@@ -376,7 +375,12 @@ color: green;
 
     #Itens-Carrinho {
         flex-direction: column;
-        display: flex;
+    
+    }
+
+    .item{
+    flex-direction: column;
+
     }
 
 
@@ -429,7 +433,6 @@ color: green;
     .Container-Aperitivos{
     flex-direction: column;
     justify-content: center;
-    overflow-y: auto;
     }
     .Alinhamento-Aperitivos{
     flex-direction: column;
@@ -440,7 +443,6 @@ color: green;
     width: 70%;
     padding-block-end: 4px;
     margin-top: 8px;
-   
     }
     .Card-Aperitivos{
     width: 50%;
@@ -864,7 +866,7 @@ section {
     flex-wrap: wrap;
     width: 100%;
     height: 100vh;
-    background-color: #fcc14c;
+    background-color: #f8d58f;
 
     }
     .Alinhamento-Aperitivos{
@@ -889,6 +891,7 @@ section {
     margin: 0 5px;
     border-radius: 10px;
     margin-top: 10px;
+    border: 02px solid yellow;
     }
     
     .Card-Aperitivos h1{
@@ -931,5 +934,4 @@ section {
     cursor: pointer;
     }
 
-    
     
